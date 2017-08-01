@@ -1,2 +1,0 @@
-# DeepSeeGit
-DeepSee Landing Page
