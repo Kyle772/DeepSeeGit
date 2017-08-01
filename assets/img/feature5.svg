@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="92px" height="62px" viewBox="0 0 92 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>shouts-icons</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ds-landing" transform="translate(-674.000000, -3307.000000)" stroke-width="3" stroke="#297FCA">
+            <g id="shouts-icons" transform="translate(674.000000, 3306.803399)">
+                <g id="Group-14">
+                    <path d="M3.46427926,60.1098709 L12.0938884,50.9124547 L12.5,50.479622 L12.5,49.886098 L12.5,11.1987813 C12.5,5.95401631 16.7538384,1.70340339 22.0054577,1.70340339 L80.6639373,1.70340339 C85.9145743,1.70340339 90.169395,5.95409528 90.169395,11.1993641 L90.169395,50.6139102 C90.169395,55.8569849 85.9138233,60.1098709 80.6688671,60.1098709 L3.46427926,60.1098709 Z" id="Rectangle-7"></path>
+                    <path d="M26.6998814,21.5 L53.6139639,21.5" id="Line"></path>
+                    <path d="M26.6998814,31.5 L76.0423659,31.5" id="Line-Copy-7"></path>
+                    <path d="M26.6998814,40.5 L76.0423659,40.5" id="Line-Copy-8"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

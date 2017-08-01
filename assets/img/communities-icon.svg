@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="82px" height="48px" viewBox="0 0 82 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>communities-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ds-landing" transform="translate(-309.000000, -2985.000000)" stroke="#297FCA" stroke-width="3">
+            <g id="communities-icon" transform="translate(308.000000, 2983.000000)">
+                <circle id="Oval-4-Copy-8" cx="13.8985572" cy="24.5468026" r="8.18181561"></circle>
+                <path d="M32.587142,17.0898778 C33.8664184,15.64609 35.0012906,13.4029216 35.0012906,11.3222107 C35.0012906,6.80351873 31.3381669,3.14039511 26.8194749,3.14039511 C24.5570108,3.14039511 22.4002325,3.93764805 20.9191336,5.42186938" id="Oval-4-Copy-10" stroke-linecap="round" transform="translate(27.960212, 10.115136) rotate(-45.000000) translate(-27.960212, -10.115136) "></path>
+                <path d="M60.6632694,17.0898778 C61.9425458,15.64609 63.077418,13.4029216 63.077418,11.3222107 C63.077418,6.80351873 59.4142944,3.14039511 54.8956024,3.14039511 C52.6331383,3.14039511 50.47636,3.93764805 48.995261,5.42186938" id="Oval-4-Copy-11" stroke-linecap="round" transform="translate(56.036340, 10.115136) rotate(-45.000000) translate(-56.036340, -10.115136) "></path>
+                <path d="M20.2380397,55.1734317 C22.1860544,53.165055 23.3852432,50.4262298 23.3852432,47.4073189 C23.3852432,41.2463101 18.3907587,36.2518256 12.2297499,36.2518256 C9.12131132,36.2518256 6.30981689,37.5231945 4.28689701,39.5743018" id="Oval-4-Copy-9" stroke-linecap="round" transform="translate(13.836070, 45.712629) rotate(-45.000000) translate(-13.836070, -45.712629) "></path>
+                <g id="Group-21-Copy-3" transform="translate(27.909034, 16.015908)">
+                    <circle id="Oval-4-Copy-8" cx="13.9895232" cy="8.53089433" r="8.18181561"></circle>
+                    <path d="M20.3290058,39.1575234 C22.2770204,37.1491467 23.4762093,34.4103214 23.4762093,31.3914106 C23.4762093,25.2304018 18.4817248,20.2359173 12.3207159,20.2359173 C9.21227739,20.2359173 6.40078295,21.5072862 4.37786307,23.5583935" id="Oval-4-Copy-9" stroke-linecap="round" transform="translate(13.927036, 29.696720) rotate(-45.000000) translate(-13.927036, -29.696720) "></path>
+                </g>
+                <g id="Group-21-Copy-4" transform="translate(55.909034, 16.015908)">
+                    <circle id="Oval-4-Copy-8" cx="13.9895232" cy="8.53089433" r="8.18181561"></circle>
+                    <path d="M20.3290058,39.1575234 C22.2770204,37.1491467 23.4762093,34.4103214 23.4762093,31.3914106 C23.4762093,25.2304018 18.4817248,20.2359173 12.3207159,20.2359173 C9.21227739,20.2359173 6.40078295,21.5072862 4.37786307,23.5583935" id="Oval-4-Copy-9" stroke-linecap="round" transform="translate(13.927036, 29.696720) rotate(-45.000000) translate(-13.927036, -29.696720) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
