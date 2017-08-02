@@ -199,7 +199,7 @@ li {
 
 #explore-deepsee-title {
     font-size: 2em;
-    font-weight: 300;
+    font-weight: 500;
     height: 60px;
     margin: 0 auto;
     padding-top: 50px;
@@ -208,7 +208,7 @@ li {
 
 #explore-deepsee-blurb {
     font-size: .9em;
-    font-weight: 300;
+    font-weight: 500;
     line-height: 20px;
     height: auto;
     width: 50%;
@@ -279,13 +279,12 @@ li {
 
 .offer-titles {
     height: auto;
-    font-size: 1.5em;
+    font-size: calc(.9em + 1vmin);
 }
 
 .offer-infos {
-    font-size: .7em;
+    font-size: calc(.5em + .6vmin);
     margin-top: 15px;
-    height: 150px;
 }
 
 #what-we-offer {
@@ -302,7 +301,7 @@ li {
     padding-bottom: 40px;
     padding-top: 20px;
     height: 50px;
-    font-weight: 100;
+    font-weight: 500;
     font-size: 2em;
 }
 
@@ -310,6 +309,7 @@ li {
     width: 100%;
     height: auto;
     margin-bottom: -30px;
+    margin-top: 30px;
 }
 
 #offer-screenshot {
@@ -330,7 +330,7 @@ li {
     -ms-flex-pack: center;
     justify-content: center;
     height: auto;
-    width: 90%;
+    width: 80%;
     margin: auto;
 }
 
@@ -378,6 +378,15 @@ li {
     #offer-screenshot {
         width: 100%;
     }
+    .offer-titles {
+        height: auto;
+        font-size: 1.5em;
+    }
+
+    .offer-infos {
+        font-size: 1em;
+        margin-top: 15px;
+    }
 }
 
 
@@ -388,13 +397,12 @@ li {
 }
 
 .feature-titles {
-    height: 30px;
     font-size: 1.3em;
     margin-bottom: 10px;
 }
 
 .feature-info {
-    font-size: .8em;
+    font-size: 1em;
 }
 
 #features {
@@ -441,7 +449,7 @@ li {
 }
 
 #feature8 {
-    width: 60%;
+    width: calc(80% - 30px);
     position: relative;
     right: 0;
     margin: auto;
@@ -459,8 +467,8 @@ li {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
-    width: 100px;
-    padding: 20px;
+    width: 20%;
+    padding: 15px;
 }
 
 #bottom-feature {
@@ -468,9 +476,9 @@ li {
 }
 
 .feature-big-title {
-    height: 40px;
     font-size: 1.3em;
     margin-bottom: 10px;
+    font-weight: 500;
 }
 
 #blue-logo-height {
@@ -480,6 +488,10 @@ li {
     box-sizing: border-box;
     height: 150px;
     width: 150px;
+}
+
+#features {
+    padding-bottom: 30px;
 }
 
 @media (max-width: 900px) {
@@ -552,7 +564,7 @@ li {
 
 #workflow .feature-big-title {
     position: relative;
-    width: auto;
+    width: 80%;
     margin: auto;
     color: white;
     margin-bottom: 10px;
@@ -560,7 +572,7 @@ li {
     padding-bottom: 40px;
     padding-top: 20px;
     height: 50px;
-    font-weight: 100;
+    font-weight: 500;
     font-size: 2em;
 }
 
