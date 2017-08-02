@@ -225,7 +225,8 @@ li {
 #whitepaper-button {
     font-size: .7em;
     color: white;
-    height: 60px;
+    font-weight: 500;
+    height: 75px;
     width: 300px;
     text-decoration: none;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#259BF9), to(#1A6BAE));
