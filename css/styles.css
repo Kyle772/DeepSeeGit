@@ -205,11 +205,12 @@ li {
 }
 
 #explore-deepsee-title {
-    font-size: 2em;
+    font-size: 3em;
     font-weight: 100;
     height: 60px;
     margin: 0 auto;
     padding-top: 60px;
+    padding-bottom: 20px;
     text-align: center;
 }
 
@@ -310,7 +311,7 @@ li {
     padding-top: 60px;
     height: 50px;
     font-weight: 100;
-    font-size: 2em;
+    font-size: 3em;
 }
 
 #offer-screenshot-container {
@@ -488,7 +489,7 @@ li {
 }
 
 .feature-big-title {
-    font-size: 2em;
+    font-size: 3em;
     margin-bottom: 10px;
     font-weight: 100;
     padding-left: 50px;
@@ -582,11 +583,10 @@ li {
     color: white;
     margin-bottom: 10px;
     text-align: center;
-    padding-bottom: 40px;
     padding-top: 60px;
     height: 50px;
-    font-weight: 100;
-    font-size: 2em;
+    font-weight: 200;
+    font-size: 3em;
 }
 
 
@@ -607,7 +607,7 @@ li {
     padding-top: 60px;
     padding-left: 0px;
     height: 50px;
-    font-size: 2em;
+    font-size: 3em;
 }
 
 #team .container {
@@ -673,7 +673,7 @@ li {
     padding-top: 40px;
     padding-left: 0px;
     height: 50px;
-    font-size: 2em;
+    font-size: 3em;
 }
 
 #contact > div {
