@@ -44,7 +44,7 @@ li {
 .nav-a {
     text-decoration: none;
     color: white;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: bold;
 }
 
@@ -133,7 +133,7 @@ li {
 }
 
 .timer-title {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 100;
     clear: both;
 }
@@ -206,7 +206,7 @@ li {
 
 #explore-deepsee-title {
     font-size: 2em;
-    font-weight: 500;
+    font-weight: 100;
     height: 60px;
     margin: 0 auto;
     padding-top: 50px;
@@ -218,7 +218,7 @@ li {
     font-weight: 500;
     line-height: 20px;
     height: auto;
-    width: 50%;
+    width: 40%;
     margin: 0 auto;
     margin-bottom: 30px;
 }
@@ -287,11 +287,11 @@ li {
 
 .offer-titles {
     height: auto;
-    font-size: calc(.9em + 1vmin);
+    font-size: calc(.5em + 1vmin);
 }
 
 .offer-infos {
-    font-size: calc(.5em + .6vmin);
+    font-size: calc(.4em + .6vmin);
     margin-top: 15px;
 }
 
@@ -309,7 +309,7 @@ li {
     padding-bottom: 40px;
     padding-top: 20px;
     height: 50px;
-    font-weight: 500;
+    font-weight: 100;
     font-size: 2em;
 }
 
@@ -388,6 +388,7 @@ li {
     }
     .offer-titles {
         height: auto;
+        margin-top: 10px;
         font-size: 1.5em;
     }
 
@@ -405,12 +406,13 @@ li {
 }
 
 .feature-titles {
-    font-size: 1.3em;
+    font-size: 1em;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
 .feature-info {
-    font-size: 1em;
+    font-size: .75em;
 }
 
 #features {
@@ -424,6 +426,8 @@ li {
     padding-top: 50px;
     text-align: center;
     margin-bottom: 30px;
+    font-weight: 100;
+    font-size: 1.5em;
 }
 
 #features-container-row1,
@@ -480,13 +484,14 @@ li {
 }
 
 #bottom-feature {
-    padding-left: 20px;
+    padding-left: 50px;
 }
 
 .feature-big-title {
-    font-size: 1.3em;
+    font-size: 2em;
     margin-bottom: 10px;
-    font-weight: 500;
+    font-weight: 100;
+    padding-left: 50px;
 }
 
 #blue-logo-height {
@@ -580,7 +585,7 @@ li {
     padding-bottom: 40px;
     padding-top: 20px;
     height: 50px;
-    font-weight: 500;
+    font-weight: 100;
     font-size: 2em;
 }
 
@@ -594,7 +599,7 @@ li {
 
 #team .feature-big-title {
     position: relative;
-    font-weight: 400;
+    font-weight: 100;
     width: auto;
     margin: 15px auto;
     text-align: center;
@@ -658,7 +663,7 @@ li {
 
 #contact .feature-big-title {
     position: relative;
-    font-weight: 400;
+    font-weight: 100;
     width: 100%;
     margin: 0 auto;
     text-align: left;
