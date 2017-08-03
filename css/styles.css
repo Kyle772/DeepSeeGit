@@ -307,7 +307,7 @@ li {
 #what-we-offer-title {
     text-align: center;
     padding-bottom: 40px;
-    padding-top: 60px;
+    padding-top: 10px;
     height: 50px;
     font-weight: 100;
     font-size: 2em;
@@ -499,8 +499,8 @@ li {
     margin-top: 60px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    height: 150px;
-    width: 150px;
+    height: 250px;
+    width: 250px;
 }
 
 #features {
@@ -669,9 +669,9 @@ li {
     margin: 0 auto;
     text-align: left;
     padding-bottom: 0px;
-    margin-bottom: 50px;
-    margin-left: 0px;
-    padding-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 40px;
+    padding-left: 0px;
     height: 50px;
     font-size: 2em;
 }
