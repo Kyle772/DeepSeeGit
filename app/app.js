@@ -9,7 +9,7 @@ let seceondElement = document.getElementById('seceondElement');
 
 // countdown
 
-let countDownDate = new Date('Nov 2, 2017 00:00:00').getTime();
+let countDownDate = new Date('Nov 11, 2017 12:00:00').getTime();
 
 let x = setInterval(() => {
 

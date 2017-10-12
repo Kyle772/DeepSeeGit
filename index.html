@@ -23,10 +23,17 @@
     <title>DeepSee.io</title>
     <!-- detect viewport  -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script> -->
     <!-- styles -->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <!-- font awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
     <!-- js -->
@@ -41,7 +48,6 @@
     <div name="hero-image-header" id="hero-image-header">
         <div id="hero-content">
             <div id="hero-nav-bar"> 
-                <img id="top-left-logo" src="assets/img/deepsee-logo.png" />
                 <ul id="social-media-nav-list">
                     <li>
                         <a href="https://www.facebook.com/Deepseeio/"><img class="nav-icon-height" src="assets/img/facebook.svg" /></a>
@@ -58,12 +64,17 @@
                 </ul>
                 <ul id="link-nav-list">
                     <li><a id="home-link" class="nav-a" href="#hero-image-header">HOME</a></li>
-                    <li><a id="about-link" class="nav-a" href="#explore-deepsee">ABOUT</a></li>
+                    <li><a id="about-link" class="nav-a" href="#about">ABOUT</a></li>
+                    <!-- Waiting for FAQ -->
+                    <!-- <li><a id="faq-link" class="nav-a" href="faq.html">FAQ</a></li> -->
+                    <li><a id="contact-link" class="nav-a" href="#contact">CONTACT</a></li>
                     <li><a class="nav-a" href="assets/pdf/whitepaper.pdf" download>WHITEPAPER</a></li>
-                    <li><a class="nav-a" href="https://medium.com/@deepseeio">BLOG</a></li>
+                    <!-- Removing unused blog-->
+                    <!-- <li><a class="nav-a" href="https://medium.com/@deepseeio">BLOG</a></li> -->
                 </ul>
             </div> 
-            <img id="hero-logo-image" src="assets/img/deepsee-logo-white.png" />
+            <img id="hero-logo-image" src="assets/img/DeepSee-banner-logo.png" />
+            <div id="countdown-announcement"> TOKEN <span class="bold">PRE-SALE</span></div>            
             <div id="countdown">
                 <div class="timer">
                     <div id="dayElement" class="timer-time"> 00 </div> <span class="timer-title">
@@ -85,117 +96,137 @@
                     SECONDS
                     </span> </div>
             </div>
-            <div id="countdown-announcement"> UNTIL <span class="bold">CURRENTSEE</span> ICO </div>
-            <div id="hero-text-wide"> 
-                DeepSee is a community-driven content authentication and monetization platform powered by blockchain, AI, and radical transparency.
-            </div>
-            <a id="scroller-link" href="#explore-deepsee">
+            <!-- <a id="scroller-link" href="#about">
                 <img id="scroller-image" src="assets/img/scroll-arrow.svg" />
-            </a>
+            </a> -->
         </div>
     </div>
-    <!-- explore deepsee -->
-    <div name="explore-deepsee" id="explore-deepsee">
-        <div id="explore-deepsee-title"> <span class="no-wrap">Explore the DeepSee</span> </div> 
-        <img id="small-bar" src="assets/img/small-bar.png" />
-        <div id="explore-deepsee-blurb"> 
-            DeepSee seeks to be the platform at the center of media analysis, discovery, verification, clarification and monetization. DeepSee does this by weaving the most important mediums of communication into a symbiotic network that incentivizes the best people to get involved in a wide variety of roles. Whether you're looking to create, organize, communicate, contribute--it doesn't matter There is a place for you to not only make a difference, but make a name and get rewarded. 
-        </div>
-        <a href="assets/pdf/whitepaper.pdf" id="whitepaper-button">
-            <i class="fa fa-file-pdf-o" aria-hidden="true"></i>  
-            VIEW OUR WHITEPAPER
-        </a> 
-    </div>
-    <!-- what we offer -->
-    <div id="what-we-offer">
-        <div id="what-we-offer-title">What Do We Offer?</div>
-        <div id="info-box-container">
-            <div id="item1"> <img class="check-mark" src="assets/img/check.svg" />
-                <div class="offer-titles"> DeepSee Platform </div>
-                <div class="offer-infos"> Whether you're looking to create, organize, communicate, contribute--it doesn't matter. There is a place for everyone to not only make a difference, but make a name and get rewarded. </div>
-            </div>
-            <div id="item2"> <img class="check-mark" src="assets/img/check.svg" />
-                <div class="offer-titles"> CurrentSee </div>
-                <div class="offer-infos"> CurrentSee is DeepSee's cryptocurrency, powered by block chain. It is the coin we are using to raise our ICO. A predetermined amount will be sold at the platform's ICO to power the development of the entire company. When CurrentSee is deposited on DeepSee, it becomes "Current." </div>
-            </div>
-            <div id="item3"> <img class="check-mark" src="assets/img/check.svg" />
-                <div class="offer-titles"> Promotion Platform </div>
-                <div class="offer-infos"> DeepSee's promotion platform is the primary driver behind CurrentSee. CurrentSee is used to purchase side panel ads, article advertisements and video advertisements. </div>
-            </div>
-        </div>
-        <div id="offer-screenshot-container" align="center"> <img id="offer-screenshot" src="/assets/img/deepsee-screenshots.png" /> </div>
-    </div>
-    <!-- features -->
-    <div id="features">
-        <div id="features-blurb"> DeepSee is the platform CurrentSee and the Ad exchange were created to serve. DeepSee is unique because it delivers multiple mediums, channels, and areas users can choose to discover and even create content. </div>
-        <div id="features-container-row1">
-            <div id="feature1"> <img class="icon-height" src="assets/img/feature1.svg" />
-                <div class="feature-titles"> Communities </div>
-                <div class="feature-info"> Similar to Reddit, Communities act as the backbone of the platform. Communities are user-generated and act as the nexus for content and discussions revolving around a certain event, place, topic, etc. Communities also pay moderators and users for their activity! </div>
-            </div>
-            <div id="feature2"> <img class="icon-height" src="assets/img/feature2.svg" />
-                <div class="feature-titles"> Videos </div>
-                <div class="feature-info"> Creators can upload their own videos, easily monetize them, and leverage other areas of the platform to get viewers. </div>
-            </div>
-            <div id="feature3"> <img class="icon-height" src="assets/img/feature3.svg" />
-                <div class="feature-titles"> Articles & Blogs </div>
-                <div class="feature-info"> Similar to Medium.com, this area of DeepSee allows users to create professional articles, blogs, etc. The area also comes with advanced discovery options and the ability to monetize content. </div>
-            </div>
-        </div>
-        <div id="features-container-row2">
-            <div id="feature4"> <img class="icon-height" src="assets/img/feature4.svg" />
-                <div class="feature-titles"> Profiles </div>
-                <div class="feature-info"> Users have a multitude of options that enable them to choose their level of privacy. Industry professionals, leaders, celebrities and others looking to use DeepSee as a platform can opt to go through the verification process, which rewards tags [note: Is 'tags'  appropriate here?] based on verifiable skills/identity. </div>
-            </div>
-            <div id="feature5"> <img class="icon-height" src="assets/img/feature5.svg" />
-                <div class="feature-titles"> Shouts </div>
-                <div class="feature-info"> Similar to Twitter, shouts act as a short (300 character) and informal means of communication on the platform. Users can upload pics, videos, follow friends or celebrities, or simply as a means of discovering trends and what's hot.  </div>
-            </div>
-            <div id="feature6"> <img class="icon-height" src="assets/img/feature6.svg" />
-                <div class="feature-titles"> Moderators </div>
-                <div class="feature-info"> DeepSee has an internal mod team in addition to community mod teams. Both platform and community mods are held to the highest standards, with public complaint boards, anti-tamper algorithms, and public block chain ledgers, in addition to many other security features. </div>
-            </div>
-        </div>
-        <div id="features-container-row3">
-            <div id="feature7"> <img id="blue-logo-height" src="assets/img/deepsee-logo-blue.png" /> </div>
-            <div id="feature8">
-                <div class="feature-big-title"> What is CurrentSee? </div>
-                <div id="bottom-feature" class="feature-info"> CurrentSee isn't just some junk coin, but a digital asset that is directly backed by services on the platfrom. Advertising is a service in high demand, volume, in addition to metrics that enable the service to trade much like a commodity. The value of CurrentSee is directly tied to the size of the DeepSee community. Thus all holders of CurrentSee have a huge incentive to recruit users to the platform. </div>
-            </div>
-        </div>
-    </div>
-    <!-- workflow -->
-    <div id="workflow">
-        <div class="feature-big-title"> Closed loop ad infrastructure </div>
-        <img class="full-width-image" src="/assets/img/ds-infrastructure.png">
-    </div>
-    <!-- team -->
-    <div id="team">
-        <div class="feature-big-title">The DeepSee Team</div>
+
+    <div id="signup" class="feature-new">
         <div class="container">
+            <div class="text-center feature-title">Sign up for our newsletter &amp; updates</div>
+            <div class="center-block" style="width:400px">
+                <form>
+                    <div class="input-group">
+                        <input class="email" type="email"
+                        placeholder="Enter Email" style="width:100%"/>
+                        <span class="input-group-btn">
+                        <button class="btn btn-primary">SIGN UP</button>
+                    </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- explore deepsee -->
+    <div name="about" id="about">
+        <div class="text-center feature-title">What is DeepSee?</div> 
+
+        <div class="about-content"> 
+
+            <div class="about-text-column">
+
+                    <div class="about-text"><div class="about-text-header">Panel</div>
+                        The panel is the main feed of DeepSee that be attuned in many different ways including personalized. The panels connects the bigs sections of DeepSee into one place filled with a filtered feeds, recommendations, friend updates, leaderboards and much more. 
+                    </div>
+                    <div class="about-text"><div class="about-text-header">Video</div>
+                        The platform is equipped with a powerful video hosting feature that allows creators a-like to upload their videos, podcasts, music and more. User can rate videos, inform themselves through filtered comments or even comment themselves! Deepsee devotes an entire section of the site for the search and discovering of new content within our video section. 
+                    </div>
+                    <div class="about-text"><div class="about-text-header">Text</div>
+                        DeepSee comes equipped with a Medium-esque hosting hub for articles, blogs, news, etc. Content creators can write pieces using our powerful text editor while users can rate, comment, share and even annotate. An entire section of the site is devoted to the discovery of written material. 
+                    </div>
+                    <div class="about-text"><div class="about-text-header">Communities</div>
+                        DeepSee lays host to advanced user generated and verified communities that are similar to Reddit in some fashions. Communities allow users to keep up with the daily trending content, questions, links, discussions etc. Powerful filters, search features, tags, paid users/moderators, forums and A.I make our communities feeds are force to be reckoned with.  
+                    </div>
+
+            </div>
+
+            <div class="about-image-column">
+
+                    <img class="about-image" src="assets/img/ds-screenshot.png" 
+                    alt="DeepSee Screenshot"/>
+
+
+            </div>
+
+            <div class="about-text-column">
+
+                    <div class="about-text"><div class="about-text-header">Shouts</div>
+                        Quick, informal and virals forms of communication are important. DeepSee incorporates 300 character user updates than can contain text, links, videos, images, gif, etc. DeepSee also dedicates an area of the site and the user profile page to serve this function.
+                    </div>
+                    <div class="about-text"><div class="about-text-header">Networks</div>
+                        Creators can establish a network for their text and video content, in addition to building a network that supports both. 
+                    </div>
+                    <div class="about-text"><div class="about-text-header">Verification</div>
+                        Users are allowed to create anonymous, personal and even verified accounts. Celebrities, influencers, professors, professionals and more can get verified under certain skills. Verification carries over into every area of the site from creators to the comments sections as a means of defining credibility.
+                    </div>
+                    <div class="about-text"><div class="about-text-header">Ad Platform</div>
+                        DeepSee utilizes an advertisement platform that is tied directly to our token CurrentSee. The DeepSee team makes use of artificial intelligence, tags and profiles as a means of serving quality advertisements. Users can also opt for premium models that are void of advertisements. 
+                    </div>
+                            
+
+            </div>
+
+        </div>
+    </div>
+    
+    <!-- currentsee -->
+    <div id="currentsee" class="feature-new">
+
+        <div class="text-center feature-title"> What is CurrentSee? </div>
+
+                <div class="center-block default-text">
+            CurrentSee isn't just some junk coin.  It's a digital asset directly backed by services on the platform.  Advertising is a high demand/large volume service that, given the appropriate metrics,
+            can be traded much like a commodity.  The value of CurrentSee is directly tied to the size of the 
+            DeepSee community--thus ALL holders of CurrentSee have huge incentives to participate in the 
+            community and recruit others to the platform.
+        </div>
+
+        <div>
+            <img class="full-width-image" src="/assets/img/ds-infrastructure.png">
+        </div>
+    </div>
+
+    <div id="timeline">
+        <div class="text-center feature-title"> Our TimeLine</div>
+
+        <!-- <img class="full-width-image" src="/assets/img/hero-image-sea.jpg"> -->
+
+    </div>
+
+    <!-- team -->    
+    <div id="team" name="team">
+        <div class="text-center feature-title">Our Team</div>
+
+        <div class="persons">
+
             <div class="person">
                 <img src="assets/img/travis-garland.png">
                 <h3>Travis Garland</h3>
                 <h5>Chief Executive Officer</h5>
-                <p>3+ years at machine learning startups, 3+ years growth marketing. <br>Prev: Researcher + Growth @PhotoKharma Inc</p>
+                <p>3+ years at machine learning startups, 3+ years growth marketing. 
+                    <br/>Prev: Researcher + Growth @PhotoKharma Inc</p>
             </div>
             <div class="person">
                 <img src="assets/img/kazi-shezan.png">
                 <h3>Kazi Shezan</h3>
                 <h5>Data Scientist</h5>
-                <p>5+ years Software Development Experience, Prev: Data Scientist @Infolytx @DataRobin</p>
+                <p>5+ years Software Development Experience
+                    <br/>Prev: Data Scientist @Infolytx @DataRobin</p>
             </div>
             <div class="person">
                 <img src="assets/img/travis-wright.png">
                 <h3>Travis Wright</h3>
                 <h5>Chief Marketing Officer</h5>
-                <p>Host @VentureBeat podcast, columnist for @Inc @VentureBeat<br> CMO @CCPDigital Ex: SMO @Norton</p>
+                <p>Host @VentureBeat podcast, columnist for @Inc @VentureBeat
+                    <br> CMO @CCPDigital Prev: SMO @Norton</p>
             </div>
             <div class="person">
-                <img src="assets/img/andrew%20duck.png">
-                <h3>Andrew Duck</h3>
-                <h5>Cheif Technology Officer</h5>
-                <p>15+ years of technical leadership <br> exp Prev: CTO @Zinio,<br> Founder/CTO @Atlantic Media</p>
+                <img src="assets/img/matt-hrushka.png">
+                <h3>Matt Hrushka</h3>
+                <h5>Chief Technology Officer</h5>
+                <p>Award winning technologist and author of  “The Ad War(2014)”. Back-end developer of the Myspace team and negotiated a 900m deal with the company</p>
             </div>
             <div class="person">
                 <img src="assets/img/tom-siebert.png">
@@ -213,42 +244,131 @@
                 <img src="assets/img/joel-comm.png">
                 <h3>Joel Comm</h3>
                 <h5>Chief Evangelist</h5>
-                <p>Joel Comm is a NY Times best-selling author, speaker, marketing strategist, technologist, futurist & @BadCrypto co-host</p>
+                <p>NY Times best-selling author, speaker, marketing strategist, technologist, futurist & @BadCrypto co-host</p>
+            </div>
+            <div class="person">
+                <img src="assets/img/adryenn-ashley.png">
+                <h3>Adryenn Ashley</h3>
+                <h5>Chief of Disruption</h5>
+                <p>Award winning actress, author and film makers with a passion for all areas and media formats. Founder of Loly LLC as well as being a successful social influencer with a 100m+ reach. </p>
+            </div>
+            <div class="person">
+                <img src="assets/img/bill-saxton.png">
+                <h3>Bill Saxton</h3>
+                <h5>Full-stack Developer</h5>
+                <p>18+ years of software development and leading teams, working with a multitude of program languages, at Sun Microsystems and Oracle Corporation.</p>
+            </div>
+        </div>
+
+        <div class="text-center feature-title" style="padding-top:20px">Our Advisors</div>
+        <div class="persons">
+            <div class="person">
+                <img src="assets/img/matt-mckibbin.png">
+                <h3>Matt Mckibbin</h3>
+                <h5>Advisor</h5>
+                <p>Decentralization and blockchain entrepreneur. Co-founder of Ubitquity LLC. VP of Business Development at Family Office.</p>
+            </div>
+            <div class="person">
+                <img src="assets/img/tony-simonovsky.png">
+                <h3>Tony Simonovsky</h3>
+                <h5>Advisor</h5>
+                <p>Serial entrepreneur and a growth hacker with a focus on ICOs. In 2017 he joined KickICO to help platform increase exposure of its upcoming ICO to crypto-investors around the world by means of growth marketing.</p>
+            </div>
+            <div class="person">
+                <img src="assets/img/nick-haase.png">
+                <h3>Nick Haase</h3>
+                <h5>Advisor</h5>
+                <p>Founder and CEO of Loot a startup paving the way for the future of marketing. Nick is also the co-founder of StartupDrugz and has a rich background in consulting, speaking, VR/AR and medical devices.</p>
             </div>
         </div>
     </div>
     <!-- contact -->
-    <div id="contact"> 
-        <div class="social">
-            <div class="feature-big-title">Join our mission</div>
-            <a href="https://www.facebook.com/Deepseeio"><img src="assets/img/Facebook_Color.png"></a>
-            <a href="https://twitter.com/deepseeio?lang=en"><img src="assets/img/Twitter_Color.png"></a>
-            <a href="https://medium.com/@deepseeio"><img src="assets/img/Medium_Color.png"></a>
-            <a href="https://www.youtube.com/channel/UCfEP4kVI-ezfwDInPHk70vg"><img src="assets/img/Youtube%20Copy_Color.png"></a>
-        </div>
-        <div class="investors">
-            <div class="feature-big-title">For Investors</div>
-            <a class="hollow-button"  href="assets/pdf/whitepaper.pdf">INVESTORS</a>
-            <a class="hollow-button"  href="assets/pdf/deck.pdf">DECK</a>
-        </div>
-        <div class="newsletter">
-            <div class="feature-big-title">Get Newsletter</div>
-            <form method="post">
+    <!-- <a id="scroller-link" href="#contact"/> -->
+    <div id="contact" class="feature-new"> 
+        <div class="container">
+        <div class="text-center feature-title">Contact Us</div>
+        <form class="center-block">
+            <div class="form-group">
+                <input class="fullname" type="text" placeholder="Enter Full Name"/>
+            </div>
+            <div class="form-group">
                 <input class="email" type="email" placeholder="Enter Email"/>
-                <input class="button" type="submit" value="SIGN UP"/>
-            </form>
+            </div>
+            <div class="form-group">
+                <textarea rows="4" placeholder="Your Message"></textarea>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success" type="button">SEND MESSAGE</button>
+            </div>
+        </form>
+    <!-- </div> -->
+    </div>
+    </div>
+
+    <div id="signup2" class="feature-new">
+        <div class="container">
+            <div class="text-center feature-title">Sign up for our newsletter &amp; updates</div>
+            <div class="center-block" style="width:400px">
+                <form>
+                    <div class="input-group">
+                        <input class="email" type="email"
+                        placeholder="Enter Email" style="width:100%"/>
+                        <span class="input-group-btn">
+                        <button class="btn btn-primary">SIGN UP</button>
+                    </span>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-    <!-- footer  -->
-    <div id="footer">
-        <img src="assets/img/deepsee-logo.png" />
-        <ul>
-            <li><a id="home-link" class="nav-a" href="#hero-image-header">HOME</a></li>
-            <li><a id="about-link" class="nav-a" href="#explore-deepsee">ABOUT</a></li>
-            <li><a class="nav-a" href="assets/pdf/whitepaper.pdf" download>WHITEPAPER</a></li>
-            <li><a class="nav-a" href="https://medium.com/@deepseeio">BLOG</a></li>
-        </ul>
-    </div>
+
+    <footer>
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="nav-bar col-sm-6">
+                    <li><a id="home-link" class="nav-a" href="#hero-image-header">HOME</a></li>
+                    <li><a id="about-link" class="nav-a" href="#about">ABOUT</a></li>
+                    <!-- Waiting for FAQ -->
+                    <!-- <li><a id="faq-link" class="nav-a" href="faq.html">FAQ</a></li> -->
+                    <li><a id="contact-link" class="nav-a" href="#contact">CONTACT</a></li>
+                    <li><a class="nav-a" href="assets/pdf/whitepaper.pdf" download>WHITEPAPER</a></li>
+                    <!-- Removing unused blog-->
+                    <!-- <li><a class="nav-a" href="https://medium.com/@deepseeio">BLOG</a></li> -->
+
+                </div>
+
+                <div class="social-bar col-sm-6 text-right">
+                    <li>
+                        <a href="https://www.facebook.com/Deepseeio/"><img class="nav-icon-height" src="assets/img/facebook.svg" /></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/deepseeio?lang=en"><img class="nav-icon-height" src="assets/img/twitter.svg" /></a>
+                    </li>
+                    <li>
+                        <a href="https://medium.com/@deepseeio"><img class="nav-icon-height" src="assets/img/medium.svg" /></a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCfEP4kVI-ezfwDInPHk70vg"><img class="nav-icon-height" src="assets/img/youtube.svg" /></a>
+                    </li>
+                </div>
+
+            </div>
+            
+            <hr class="copyright-hr"/>
+
+            <div class="copyright text-center">
+
+                &copy; 2017 Deepsee.io. - All Rights Reserved
+
+            </div>
+
+        </div>
+
+    </footer>    
+
 </body>
 
 </html>
