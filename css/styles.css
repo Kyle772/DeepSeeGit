@@ -818,7 +818,7 @@ li {
 }*/
 
 #contact form {
-    width:300px;
+    max-width:300px;
 }
 
 #contact .content {
@@ -970,6 +970,10 @@ li {
 
 #signup .content, #signup2 .content {
     justify-content: center;
+}
+
+#signup .signup-form {
+    max-width:400px;
 }
 
 /*footer*/
