@@ -5,7 +5,7 @@ body > * {
 }
 
 body {
-    font-family: 'Roboto-Regular', sans-serif;
+    font-family: Montserrat, sans-serif;
     font-size: 16px;
     margin: 0;
     overflow: hidden;
@@ -372,6 +372,7 @@ li {
     height: auto;
     width: 80%;
     margin: auto;
+    margin-top: 20px;
 }
 
 .about-text-column {
@@ -557,7 +558,7 @@ li {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .feature-new .default-text {
@@ -566,7 +567,7 @@ li {
 }
 
 .feature-title {
-    font-family: Roboto-Light, sans-serif;
+    font-family: Montserrat, sans-serif;
     font-size: 3em;
     font-weight: 100;
     margin-bottom: 20px;
@@ -767,7 +768,7 @@ li {
 }
 
 .person h3 {
-    font-family: Roboto-Medium, sans-serif;
+    font-family: Montserrat, sans-serif;
     font-size: 1.5em;
     line-height:1.8em;
 }
@@ -972,7 +973,7 @@ li {
     justify-content: center;
 }
 
-#signup .signup-form {
+.signup-form {
     max-width:400px;
 }
 
