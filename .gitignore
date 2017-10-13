@@ -1,1 +1,4 @@
 Procfile 
+composer.phar
+.env
+vendor
