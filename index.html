@@ -105,9 +105,9 @@
         <div class="container">
             <div class="text-center feature-title">Sign up for our newsletter &amp; updates</div>
             <div class="center-block signup-form">
-                <form>
+                <form method="post">
                     <div class="input-group">
-                        <input class="email" type="email"
+                        <input name="email" class="email" type="email"
                         placeholder="Enter Email" style="width:100%"/>
                         <span class="input-group-btn">
                         <button class="btn btn-primary">SIGN UP</button>
@@ -117,7 +117,7 @@
             </div>
         </div>
     </div>
-        
+
     </div>
 
     <!-- <div id="signup" class="feature">
@@ -315,15 +315,15 @@
     <div id="contact" name="contact" class="feature"> 
         <div class="container">
         <div class="text-center feature-title">Contact Us</div>
-        <form class="center-block">
+        <form class="center-block" method="post">
             <div class="form-group">
-                <input class="fullname" type="text" placeholder="Enter Full Name"/>
+                <input name="name" type="text" placeholder="Enter Full Name"/>
             </div>
             <div class="form-group">
-                <input class="email" type="email" placeholder="Enter Email"/>
+                <input name="email" type="email" placeholder="Enter Email"/>
             </div>
             <div class="form-group">
-                <textarea rows="4" placeholder="Your Message"></textarea>
+                <textarea name="message" rows="4" placeholder="Your Message"></textarea>
             </div>
             <div class="form-group">
                 <button class="btn btn-success" type="button">SEND MESSAGE</button>
@@ -337,9 +337,9 @@
         <div class="container">
             <div class="text-center feature-title">Sign up for our newsletter &amp; updates</div>
             <div class="center-block signup-form">
-                <form>
+                <form method="post">
                     <div class="input-group">
-                        <input class="email" type="email"
+                        <input name="email" class="email" type="email"
                         placeholder="Enter Email" style="width:100%"/>
                         <span class="input-group-btn">
                         <button class="btn btn-primary">SIGN UP</button>

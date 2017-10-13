@@ -7,10 +7,10 @@ require 'vendor/autoload.php';
 
 if(array_key_exists('message', $_POST)) {
     $subject = "Message from DeepSee landing page";
-    $content = new SendGrid\Content("text/plain", $_POST["message"]);
+    $content = new SendGrid\Content("text/plain", 'TEST');
 } else {
     $subject = "Newsletter subscription request from DeepSee landing page";
-    $content = new SendGrid\Content("text/plain", 'Subscribe');
+    $content = new SendGrid\Content("text/plain", $_POST["email"]);
 }
 
 $from = new SendGrid\Email(null, $_POST["email"]);
@@ -22,6 +22,7 @@ $apiKey = getenv('SENDGRID_API_KEY');
 $sg = new \SendGrid($apiKey);
 
 $response = $sg->client->mail()->send()->post($mail);
-echo $response->statusCode();
-echo $response->headers();
-echo $response->body();
+// echo $response->statusCode();
+// echo $response->headers();
+// echo $response->body();
+header('Location: index.html');
