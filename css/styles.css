@@ -975,6 +975,10 @@ li {
     color: #ffffff;
 }
 
+#signup2 {
+    background-color: #1C466F;
+}
+
 #signup .feature-title, #signup2 .feature-title {
     font-size: 1.5em;
 }
