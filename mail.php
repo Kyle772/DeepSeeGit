@@ -5,16 +5,31 @@ require 'vendor/autoload.php';
 // If you are not using Composer (recommended)
 // require("path/to/sendgrid-php/sendgrid-php.php");
 
-if(array_key_exists('message', $_POST)) {
-    $subject = "Message from DeepSee landing page";
-    $content = new SendGrid\Content("text/plain", 'TEST');
-} else {
-    $subject = "Newsletter subscription request from DeepSee landing page";
-    $content = new SendGrid\Content("text/plain", $_POST["email"]);
+// Send back to home page if not filled out correctly
+if(!isset($_POST['email'])) {
+    header('Location: index.html');
 }
 
-$from = new SendGrid\Email(null, $_POST["email"]);
-$to = new SendGrid\Email(null, "saxton@gmail.com");
+if(isset($_POST['message'])) {
+    $subject = "Message from HOME page";
+
+    $content_text =<<<EOD
+NAME: {$_POST['name']}
+
+EMAIL: {$_POST['email']}
+
+{$_POST['message']}
+EOD;
+
+    $content = new SendGrid\Content("text/plain", $content_text);
+
+} else {
+    $subject = "Subscription request from HOME page";
+    $content = new SendGrid\Content("text/plain", $_POST['email']);
+}
+
+$from = new SendGrid\Email(null, $_POST['email']);
+$to = new SendGrid\Email(null, 'admin@deepsee.io');
 
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
