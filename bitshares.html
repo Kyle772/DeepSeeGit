@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <script type="text/javascript" src="https://cdn.rawgit.com/svk31/graphenejs-ws/master/build/graphenejs-ws.js" ></script>
+        <script
+              src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+              integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+              crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <p>Bitshares Testing Page</p>
+
+
+        <div>
+
+
+
+        <script type="text/javascript">
+
+            var Api = window.grapheneWS;
+
+            let live = false;
+
+            const BASE_ASSET_ID = "1.3.0";
+            
+            var server;
+            var base_asset_id;
+            var our_asset_id;
+            var main_account_id;
+
+            if(live) {
+                //live
+                server = "wss://bitshares.openledger.info/ws";
+                base_asset_id = "1.3.0";
+                const usd_asset_id = "1.3.121";
+
+                main_account_name="n-jingfeit";
+                main_account_id="1.2.423992";
+
+            } else {
+                //test
+                server = "wss://node.testnet.bitshares.eu";
+                base_asset_id = "1.3.0";
+                out_asset_id = "1.3.389";
+
+                main_account_name="wimaka-0";
+                main_account_id="1.2.4249";
+            }            
+
+            Api.instance(server, true).init_promise.then((res) => {
+
+                const test_args = [
+
+                    ["lookup_account_names", [[main_account_name]]],
+                    ["get_account_balances", [main_account_id, []]]
+
+                ];
+
+                let test_arg_index = 1;
+                
+                // console.log("connected to:", res[0].network);
+
+                // let call = "lookup_account_names";
+                // let params = [[main_account_name]];
+
+                let call = "get_account_balances";
+                let params = [main_account_id, []];
+
+                Api.instance().db_api().exec(test_args[test_arg_index][0], test_args[test_arg_index][1])
+                    .then((res) => {
+
+                        document.body.appendChild(document.createElement('pre')).innerHTML = JSON.stringify(res, undefined, 2);
+
+                        // console.log("TEST", res[0]);
+                    });
+});        
+
+
+        </script>
+
+    </body>
+</html>
