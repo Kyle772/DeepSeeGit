@@ -374,8 +374,8 @@ form {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -385,16 +385,25 @@ form {
     margin-top: 40px;
 }
 
+.about-content > div {
+    margin-bottom:40px;
+}
+
+/*.about-content-additional {
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+}
+*/
+.about-content-additional > .row > div {
+    padding: 0 20px 0 20px;
+}
+
 .about-text-column {
     display: flex;
     flex-direction: column;
     text-align: left;
 }
-
-/*.about-image-column {
-    display: flex;
-    flex-direction: column;  
-}*/
 
 .about-image-column img {
     max-width: 100%;
