@@ -29,7 +29,8 @@ EOD;
 }
 
 $from = new SendGrid\Email(null, $_POST['email']);
-$to = new SendGrid\Email(null, 'admin@deepsee.io');
+// $to = new SendGrid\Email(null, 'admin@deepsee.io');
+$to = new SendGrid\Email(null, 'saxton@gmail.com');
 
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
