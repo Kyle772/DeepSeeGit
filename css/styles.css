@@ -81,9 +81,14 @@ form {
 }
 
 .hero-nav-bar,
-#hero-nav-bar {
-    height: 40px;
-    margin-bottom: 50px;
+#hero-nav-bar,
+#hero-nav-bar-childpages {
+    height: 80px;
+}
+
+#hero-nav-bar-childpages {
+    background-color: #1E5E96;
+    color: #1C466F;
 }
 
 .link-nav-list,
@@ -148,6 +153,10 @@ form {
     width: 150px;
     margin-top: 20px;
     margin-bottom: 50px;
+}
+
+.childpage-content {
+    background-color: #EEF3F7;
 }
 
 #countdown {
@@ -1044,4 +1053,26 @@ footer {
     background-color: #cccccc;
     border: none;
     height: 1px;    
+}
+
+/* FAQ */
+
+.faq-sidebar-icon {
+    margin-right:20px;
+}
+
+.faq-sidebar-nav-item {
+    background-color: #ffffff;
+    padding: 10px;
+    color: #1C466F ;
+    border: 1px solid #C5D3DE;
+    margin-bottom:10px;
+}
+
+.faq-section {
+    background-color: #ffffff;
+    padding: 10px;
+    color: #1C466F ;
+    border: 1px solid #C5D3DE;
+    margin-bottom:10px;
 }
