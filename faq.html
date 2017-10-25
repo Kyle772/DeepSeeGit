@@ -24,8 +24,11 @@
     <title>DeepSee.io</title>
     <!-- detect viewport  -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- styles -->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <!-- font awesome -->
@@ -34,6 +37,7 @@
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
     <!-- js -->
+    <script type="text/javascript" src="app/util.js"></script>
     <script type="text/javascript" src="app/smooth-scroll.js"></script>
 
 </head>
@@ -57,11 +61,11 @@
                 </li>
             </ul>
             <ul id="link-nav-list">
-                <li><a id="home-link" class="nav-a" href="#hero-image-header">HOME</a></li>
-                <li><a id="about-link" class="nav-a" href="#about">ABOUT</a></li>
+                <li><a id="home-link" class="nav-a" href="/">HOME</a></li>
+                <li><a id="about-link" class="nav-a" href="/#about">ABOUT</a></li>
                 <!-- Waiting for FAQ -->
                 <!-- <li><a id="faq-link" class="nav-a" href="faq.html">FAQ</a></li> -->
-                <li><a id="contact-link" class="nav-a" href="#contact">CONTACT</a></li>
+                <li><a id="contact-link" class="nav-a" href="/#contact">CONTACT</a></li>
                 <li><a class="nav-a" href="assets/pdf/whitepaper.pdf" download>WHITEPAPER</a></li>
                 <!-- Removing unused blog-->
                 <!-- <li><a class="nav-a" href="https://medium.com/@deepseeio">BLOG</a></li> -->
@@ -69,15 +73,15 @@
         </div> 
 
         <div class="container">
-            
+
             <h1 class="text-center">Frequently Asked Questions</h1>
 
             <div class="row">
-                <div class="faq-sidebar col-sm-4">
+                <div class="faq-sidebar col-sm-3">
 
                     <a href="#general-section">
                         <div class="faq-sidebar-nav-item">
-                            <i class="fa fa-fw fa-question faq-sidebar-icon"></i>General
+                            <i class="fa fa-lg fa-fw fa-question faq-sidebar-icon"></i>General
                         </div>
                     </a>
                     <a href="#features-section">
@@ -87,20 +91,82 @@
                     </a>
                 </div>
 
-                <div class="faq-sections col-sm-8">
+                <div class="faq-sections col-sm-9">
                     <div class="faq-section">
-                        <h2 id="general-section" class="faq-section-header">General</h2>
-                        <p>Aenean magna elit, ornare vitae tortor eget, pulvinar bibendum nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac tortor quam. In dapibus arcu vel tincidunt consequat. Duis semper libero id leo aliquet, vitae ultrices metus bibendum. Proin ornare posuere risus eget imperdiet. Proin pretium tortor ut lectus tincidunt condimentum. Fusce imperdiet enim vitae turpis hendrerit interdum. In lobortis, est eget mollis hendrerit, lectus massa placerat dolor, fermentum ultrices mi sapien viverra est. Suspendisse scelerisque arcu maximus sem mattis, eget tristique nisi porta. Nam ultrices, leo et rhoncus vulputate, ligula risus pellentesque massa, ullamcorper vulputate erat purus in nisi. Etiam venenatis sodales dui, non rhoncus sapien blandit nec. Cras ornare turpis aliquet, interdum est sit amet, efficitur risus. </p>
+
+                        <div class="faq-section-header">
+                            <i class="fa fa-2x fa-fw fa-question"></i><h2 id="general-section" class="faq-section-header">General</h2>
+                        </div>
+
+                        <div class="faq-section-content">
+
+                            <div class="collapsible-header">
+                                <h3>What is DeepSee?</h3>
+                                <a class="toggle" data-toggle="collapse" data-target="#what-is-ds-content">
+                                    <i class="fa fa-lg fa-plus-circle"></i>
+                                </a>
+                            </div>
+                            <hr/>
+                            <div class="collapse-container">
+                                <div id="what-is-ds-content" class=collapse>Aenean magna elit, ornare vitae tortor eget, pulvinar bibendum nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac tortor quam. In dapibus arcu vel tincidunt consequat. 
+                                    <hr/>
+                                </div>
+                            </div>
+
+                            <div class="collapsible-header">
+                                <h3>What is CurrentSee?</h3>
+                                <a class="toggle" data-toggle="collapse" data-target="#what-is-cs-content">
+                                    <i class="fa fa-lg fa-plus-circle"></i>
+                                </a>
+                            </div>
+                            <hr/>
+                            <div class="collapse-container">
+                                <div id="what-is-cs-content" class=collapse>Aenean magna elit, ornare vitae tortor eget, pulvinar bibendum nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac tortor quam. In dapibus arcu vel tincidunt consequat. 
+                                    <hr/>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="faq-section">
-                        <h2 id="features-section" class="faq-section-header">Features</h2>
-                        <p>Praesent elementum, ipsum laoreet ultricies iaculis, elit velit ultricies eros, lacinia convallis neque ligula at nisi. Ut sit amet sapien eget ligula efficitur tincidunt. Curabitur vehicula nec sapien id pulvinar. Aliquam erat orci, pellentesque eu quam quis, posuere mattis leo. Sed eu elit nec dolor convallis convallis egestas in nibh. Morbi nec accumsan mauris. Morbi laoreet lacinia luctus. Integer vel scelerisque nisi. Ut purus augue, viverra non faucibus nec, egestas sed dui. Vivamus metus magna, ullamcorper eu elementum id, gravida eu neque. Donec magna augue, semper nec ipsum nec, volutpat imperdiet sem. Vestibulum tincidunt augue metus, a placerat dui pulvinar quis. </p>
+
+                        <div class="faq-section-header">
+                            <i class="fa fa-2x fa-fw fa-star"></i><h2 id="features-section" class="faq-section-header">Features</h2>
+                        </div>
+
+                        <div class="faq-section-content">
+
+                            <div class="collapsible-header">
+                                <h3>What can I do with Deepsee?</h3>
+                                <a class="toggle" data-toggle="collapse" data-target="#what-can-i-content">
+                                    <i class="fa fa-lg fa-plus-circle"></i>
+                                </a>
+                            </div>
+                            <hr/>
+                            <div class="collapse-container">
+                                <div id="what-can-i-content" class=collapse>Aenean magna elit, ornare vitae tortor eget, pulvinar bibendum nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac tortor quam. In dapibus arcu vel tincidunt consequat. 
+                                    <hr/>
+                                </div>
+                            </div>
+
+                            <div class="collapsible-header">
+                                <h3>How do I create a profile?</h3>
+                                <a class="toggle" data-toggle="collapse" data-target="#how-do-i-content">
+                                    <i class="fa fa-lg fa-plus-circle"></i>
+                                </a>
+                            </div>
+                            <hr/>
+                            <div class="collapse-container">
+                                <div id="how-do-i-content" class=collapse>Aenean magna elit, ornare vitae tortor eget, pulvinar bibendum nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac tortor quam. In dapibus arcu vel tincidunt consequat. 
+                                    <hr/>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
-    </div>
-</body>
+    </body>
 
-</html>
+    </html>
