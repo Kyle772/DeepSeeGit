@@ -780,28 +780,40 @@ form {
     justify-content: center;
 }
 
-#contact input, textarea, button {
+#contact input, #contact textarea, #contact button {
     width: 100%;
-}
-
-#signup, #signup2 {
-    color: #ffffff;
 }
 
 #signup2 {
     background-color: #1C466F;
 }
 
-#signup .feature-title, #signup2 .feature-title {
+.signup {
+    color: #ffffff;
+}
+
+.signup .feature-title {
     font-size: 1.5em;
 }
 
-#signup .content, #signup2 .content {
+.signup .content {
     justify-content: center;
 }
 
 .signup-form {
     max-width:400px;
+}
+
+.signup-form .input-group {
+    width: 70%;
+}
+
+.signup-form input {
+    width: 100%;
+}
+
+.signup-form button {
+    width:25%;
 }
 
 /*footer*/

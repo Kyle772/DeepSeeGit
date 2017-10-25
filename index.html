@@ -45,7 +45,7 @@
 <body>
 
     <div class="frontpage-splash">
-        
+
         <nav class="navbar navbar-default collapse navbar-collapse">
             <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -106,18 +106,19 @@
                     SECONDS
                 </span> </div>
             </div>
-            <div id="signup" class="feature">
+            <div id="signup" class="feature signup">
                 <div class="container">
                     <div class="text-center feature-title">Sign up for our newsletter &amp; updates</div>
                     <div class="center-block signup-form">
-                        <form method="post" action="mail.php">
+                        <form method="post" action="mail.php" class="form-inline">
                             <div class="input-group">
                                 <input name="email" class="email" type="email"
-                                placeholder="Enter Email" style="width:100%"/>
-                                <span class="input-group-btn">
-                                    <button class="btn btn-primary">SIGN UP</button>
-                                </span>
+                                placeholder="Enter Email"/>
                             </div>
+                                <!-- <span class="input-group-btn"> -->
+                                    <button class="btn btn-success">SIGN UP</button>
+                                <!-- </span> -->
+                            <!-- </div> -->
                         </form>
                     </div>
                 </div>
@@ -341,18 +342,19 @@
                             </div>
                         </div>
 
-                        <div id="signup2" class="feature">
+                        <div id="signup2" class="feature signup">
                             <div class="container">
                                 <div class="text-center feature-title">Sign up for our newsletter &amp; updates</div>
                                 <div class="center-block signup-form">
-                                    <form method="post" action="mail.php">
+                                    <form method="post" action="mail.php" class="form-inline">
                                         <div class="input-group">
                                             <input name="email" class="email" type="email"
-                                            placeholder="Enter Email" style="width:100%"/>
-                                            <span class="input-group-btn">
-                                                <button class="btn btn-primary">SIGN UP</button>
-                                            </span>
+                                            placeholder="Enter Email"/>
                                         </div>
+                                            <!-- <span class="input-group-btn"> -->
+                                                <button class="btn btn-success">SIGN UP</button>
+                                            <!-- </span> -->
+                                        <!-- </div> -->
                                     </form>
                                 </div>
                             </div>
@@ -360,40 +362,41 @@
 
                         <footer>
 
-                            <div class="container">
+                                <nav class="navbar navbar-default collapse navbar-collapse">
+            <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">      
+                <a class="navbar-brand" href="#">
+                    <img alt="header-logo" src="assets/img/deepsee-header-logo.png" style="height: 40px; width: 144px"/>
+                </a>
+            </div>
 
-                                <div class="row">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div>
 
-                                    <div class="nav-bar col-sm-6">
-                                        <li><a id="home-link" class="nav-a" href="#hero-image-header">HOME</a></li>
-                                        <li><a id="about-link" class="nav-a" href="#about">ABOUT</a></li>
-                                        <!-- Waiting for FAQ -->
-                                        <!-- <li><a id="faq-link" class="nav-a" href="faq.html">FAQ</a></li> -->
-                                        <li><a id="contact-link" class="nav-a" href="#contact">CONTACT</a></li>
-                                        <li><a class="nav-a" href="assets/pdf/whitepaper.pdf" download>WHITEPAPER</a></li>
-                                        <!-- Removing unused blog-->
-                                        <!-- <li><a class="nav-a" href="https://medium.com/@deepseeio">BLOG</a></li> -->
+                <ul class="nav navbar-nav navbar-right social-nav">
+                    <li>
+                        <a href="https://www.facebook.com/Deepseeio/"><i class="fa fa-lg fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/deepseeio?lang=en"><i class="fa fa-lg fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://medium.com/@deepseeio"><i class="fa fa-lg fa-medium"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCfEP4kVI-ezfwDInPHk70vg"><i class="fa fa-lg fa-youtube"></i></a>
+                    </li>
+                </ul>
 
-                                    </div>
-
-                                    <div class="social-bar col-sm-6 text-right">
-                                        <li>
-                                            <a href="https://www.facebook.com/Deepseeio/"><img class="nav-icon-height" src="assets/img/facebook.svg" /></a>
-                                        </li>
-                                        <li>
-                                            <a href="https://twitter.com/deepseeio?lang=en"><img class="nav-icon-height" src="assets/img/twitter.svg" /></a>
-                                        </li>
-                                        <li>
-                                            <a href="https://medium.com/@deepseeio"><img class="nav-icon-height" src="assets/img/medium.svg" /></a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.youtube.com/channel/UCfEP4kVI-ezfwDInPHk70vg"><img class="nav-icon-height" src="assets/img/youtube.svg" /></a>
-                                        </li>
-                                    </div>
-
-                                </div>
-
-                                <hr class="copyright-hr"/>
+                <ul class="nav navbar-nav navbar-right link-nav">
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>   
+                    <li><a href="assets/pdf/whitepaper.pdf">WHITEPAPER</a></li>   
+                </ul>
+            </div>
+        </div><!-- /.container-fluid -->
+    </nav>
 
                                 <div class="copyright text-center">
 
@@ -401,7 +404,6 @@
 
                                 </div>
 
-                            </div>
 
                         </footer>    
 
