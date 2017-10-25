@@ -1,8 +1,8 @@
-body > * {
+/*body > * {
     box-sizing: border-box;
     overflow: hidden;
     overflow-y: auto;
-}
+}*/
 
 body {
     font-family: Montserrat, sans-serif;
@@ -18,10 +18,10 @@ body {
     }
 }
 
-li {
+/*li {
     padding-right: 15px;
     display: inline;
-}
+}*/
 
 h1 {
     margin: 60px;
@@ -83,6 +83,41 @@ form {
 
 /*header and nav bar*/
 
+.frontpage-splash {
+    background: url('../assets/img/hero-image-sea.jpg');
+    background-size: cover;
+    color: white;
+}
+
+.navbar {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: inherit;
+}
+
+.navbar-brand {
+    padding: 5px 15px;
+}
+
+.navbar-default {
+    border-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
+    font-size: .8em;
+}
+
+.social-nav {
+    margin-right: 20px;
+}
+
+/* old navbar */
+
+
+
 .nav-a {
     text-decoration: none;
     color: white;
@@ -97,7 +132,13 @@ form {
 .hero-nav-bar,
 #hero-nav-bar,
 #hero-nav-bar-childpages {
-    height: 40px;
+    height: 60px;
+    padding: 5px;
+}
+
+#hero-nav-bar .row {
+    display: flex;
+    align-items: center;
 }
 
 #hero-nav-bar-childpages {
@@ -105,7 +146,7 @@ form {
     color: #1C466F;
 }
 
-.link-nav-list,
+/*.link-nav-list,
 #link-nav-list {    
     display: inline-block;
     list-style-type: none;
@@ -122,7 +163,7 @@ form {
     float: right;
     padding-right: 22px;
     margin: 0;
-}
+}*/
 
 #top-left-logo {
     padding-top: 20px;
@@ -136,14 +177,14 @@ form {
     background: url('../assets/img/hero-image-sea.jpg');
     background-size: cover;
     background-position: center;
-    z-index: 0;
+    /*z-index: 0;*/
 }
 
 #hero-content {
     color: white;
     font-size: 2.1em;
     text-align: center;
-    z-index: 1;
+    /*z-index: 1;*/
 }
 
 #hero-text-wide {
@@ -168,37 +209,41 @@ form {
     margin-bottom: 50px;
 }
 
-.childpage-content {
+.childpage-content {    
+    color: #1C466F ;
     background-color: #EEF3F7;
 }
 
 #countdown {
-    height: 100px;
-    min-width: 800px
+    /*height: 100px;*/
+    /*min-width: 800px*/
 }
 
 #countdown-announcement {
-    font-weight: 100;
-    height: 40px;
-    margin-bottom: 70px;
+    /*font-weight: 100;*/
+    /*height: 40px;*/
+    margin-bottom: 5px;
+    font-size: 1.2em;
 }
 
 .timer {
-    width: 100px;
-    height: 20px;
+    /*width: 100px;*/
+    /*height: 20px;*/
     display: inline-block;
-    font-size: 50px;
-    font-weight: bold;
+    margin: 0 2px;
+    /*font-size: 50px;*/
+    /*font-weight: bold;*/
 }
 
 .timer-title {
-    font-size: 12px;
-    font-weight: 100;
+    font-size: .8em;
     clear: both;
 }
 
 .timer-time {
-    line-height: 8px;
+    /*line-height: 8px;*/
+    font-size: 2.5em;
+    font-weight: bold;
 }
 
 #scroller-image {
@@ -786,7 +831,7 @@ footer {
 }*/
 
 #footer .hero-nav-bar {
-    width:100%;
+    /*width:100%;*/
 }
 
 .copyright {
@@ -818,7 +863,6 @@ footer {
 .faq-section {
     background-color: #ffffff;
     padding: 10px;
-    color: #1C466F ;
     border: 1px solid #C5D3DE;
     margin-bottom:10px;
     padding: 10px;

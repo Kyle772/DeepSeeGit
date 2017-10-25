@@ -23,8 +23,11 @@
     <title>DeepSee.io</title>
     <!-- detect viewport  -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- styles -->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <!-- font awesome -->
@@ -40,98 +43,90 @@
 </head>
 
 <body>
-    <!-- hero image header -->
-    <div name="hero-image-header" id="hero-image-header">
-        <div id="hero-content">
-            <div id="hero-nav-bar"> 
-                <ul id="social-media-nav-list">
+
+    <div class="frontpage-splash">
+        
+        <nav class="navbar navbar-default collapse navbar-collapse">
+            <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">      
+                <a class="navbar-brand" href="#">
+                    <img alt="header-logo" src="assets/img/deepsee-header-logo.png" style="height: 40px; width: 144px"/>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div>
+
+                <ul class="nav navbar-nav navbar-right social-nav">
                     <li>
-                        <a href="https://www.facebook.com/Deepseeio/"><img class="nav-icon-height" src="assets/img/facebook.svg" /></a>
+                        <a href="https://www.facebook.com/Deepseeio/"><i class="fa fa-lg fa-facebook"></i></a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/deepseeio?lang=en"><img class="nav-icon-height" src="assets/img/twitter.svg" /></a>
+                        <a href="https://twitter.com/deepseeio?lang=en"><i class="fa fa-lg fa-twitter"></i></a>
                     </li>
                     <li>
-                        <a href="https://medium.com/@deepseeio"><img class="nav-icon-height" src="assets/img/medium.svg" /></a>
+                        <a href="https://medium.com/@deepseeio"><i class="fa fa-lg fa-medium"></i></a>
                     </li>
                     <li>
-                        <a href="https://www.youtube.com/channel/UCfEP4kVI-ezfwDInPHk70vg"><img class="nav-icon-height" src="assets/img/youtube.svg" /></a>
+                        <a href="https://www.youtube.com/channel/UCfEP4kVI-ezfwDInPHk70vg"><i class="fa fa-lg fa-youtube"></i></a>
                     </li>
                 </ul>
-                <ul id="link-nav-list">
-                    <li><a id="home-link" class="nav-a" href="#hero-image-header">HOME</a></li>
-                    <li><a id="about-link" class="nav-a" href="#about">ABOUT</a></li>
-                    <!-- Waiting for FAQ -->
-                    <!-- <li><a id="faq-link" class="nav-a" href="faq.html">FAQ</a></li> -->
-                    <li><a id="contact-link" class="nav-a" href="#contact">CONTACT</a></li>
-                    <li><a class="nav-a" href="assets/pdf/whitepaper.pdf" download>WHITEPAPER</a></li>
-                    <!-- Removing unused blog-->
-                    <!-- <li><a class="nav-a" href="https://medium.com/@deepseeio">BLOG</a></li> -->
+
+                <ul class="nav navbar-nav navbar-right link-nav">
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>   
+                    <li><a href="assets/pdf/whitepaper.pdf">WHITEPAPER</a></li>   
                 </ul>
-            </div> 
-            <img id="hero-logo-image" src="assets/img/DeepSee-banner-logo.png" />
-            <div id="countdown-announcement"> TOKEN <span class="bold">PRE-SALE</span></div>            
-            <div id="countdown">
-                <div class="timer">
-                    <div id="dayElement" class="timer-time"> 00 </div> <span class="timer-title">
+            </div>
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="text-center">
+        <img id="hero-logo-image" src="assets/img/DeepSee-banner-logo.png" />
+        <div id="countdown-announcement"> TOKEN <span class="bold">PRE-SALE</span></div>            
+        <div id="countdown">
+            <div class="timer">
+                <div id="dayElement" class="timer-time"> 00 </div> <span class="timer-title">
                     DAYS
-                    </span> 
-                </div>
-                <div class="timer">
-                    <div id="hourElement" class="timer-time"> 00 </div> <span class="timer-title">
+                </span> 
+            </div>
+            <div class="timer">
+                <div id="hourElement" class="timer-time"> 00 </div> <span class="timer-title">
                     HOURS
-                    </span> 
-                </div>
-                <div class="timer">
-                    <div id="minuteElement" class="timer-time"> 00 </div> <span class="timer-title">
+                </span> 
+            </div>
+            <div class="timer">
+                <div id="minuteElement" class="timer-time"> 00 </div> <span class="timer-title">
                     MINUTES
-                    </span> 
-                </div>
-                <div class="timer">
-                    <div id="secondElement" class="timer-time"> 00 </div> <span class="timer-title">
+                </span> 
+            </div>
+            <div class="timer">
+                <div id="secondElement" class="timer-time"> 00 </div> <span class="timer-title">
                     SECONDS
-                    </span> </div>
+                </span> </div>
             </div>
-            <!-- <a id="scroller-link" href="#about">
-                <img id="scroller-image" src="assets/img/scroll-arrow.svg" />
-            </a> -->
-        </div>
-
-        <div id="signup" class="feature">
-        <div class="container">
-            <div class="text-center feature-title">Sign up for our newsletter &amp; updates</div>
-            <div class="center-block signup-form">
-                <form method="post" action="mail.php">
-                    <div class="input-group">
-                        <input name="email" class="email" type="email"
-                        placeholder="Enter Email" style="width:100%"/>
-                        <span class="input-group-btn">
-                        <button class="btn btn-primary">SIGN UP</button>
-                    </span>
+            <div id="signup" class="feature">
+                <div class="container">
+                    <div class="text-center feature-title">Sign up for our newsletter &amp; updates</div>
+                    <div class="center-block signup-form">
+                        <form method="post" action="mail.php">
+                            <div class="input-group">
+                                <input name="email" class="email" type="email"
+                                placeholder="Enter Email" style="width:100%"/>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary">SIGN UP</button>
+                                </span>
+                            </div>
+                        </form>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
-    </div>
 
     </div>
 
-    <!-- <div id="signup" class="feature">
-        <div class="container">
-            <div class="text-center feature-title">Sign up for our newsletter &amp; updates</div>
-            <div class="center-block signup-form">
-                <form>
-                    <div class="input-group">
-                        <input class="email" type="email"
-                        placeholder="Enter Email" style="width:100%"/>
-                        <span class="input-group-btn">
-                        <button class="btn btn-primary">SIGN UP</button>
-                    </span>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div> -->
+
 
     <!-- about -->
     <div name="about" id="about" class="feature">
@@ -151,265 +146,265 @@
             <br/>
             <div class="about-content-additional container-fluid">
                 <div class="row">
-                <div class="col-md-4">
-                    <img src="/assets/img/artificial-intelligence.png" 
-                    alt="artificial-intelligence"/>
-                    <h5>Artificial Intelligence</h5>
-                    <p>DeepSee uses machine learning and a variety of
-                        neural networks to create powerful search, recommmendations, 
-                        and content analysis functionality within the platform.
-                        It also uses reinforcement learning to detect bots, growth
+                    <div class="col-md-4">
+                        <img src="/assets/img/artificial-intelligence.png" 
+                        alt="artificial-intelligence"/>
+                        <h5>Artificial Intelligence</h5>
+                        <p>DeepSee uses machine learning and a variety of
+                            neural networks to create powerful search, recommmendations, 
+                            and content analysis functionality within the platform.
+                            It also uses reinforcement learning to detect bots, growth
                         marketers, and vote manipulators.</p>
-                </div>
-
-                <div class="col-md-4">
-                    <img src="/assets/img/verification.png" 
-                    alt="verification"/>
-                    <h5>Verification</h5>
-                    <p>Users have many different verification options: from completely
-                        anonymous to 3rd-party vetting with skill/profession certification.  Users can use their credentials to 
-                        maximize their "voice" when it comes to content creation,
-                        commenting, and even voting.</p>
-                </div>
-
-                <div class="col-md-4">
-                    <img src="/assets/img/blockchain.png" 
-                    alt="blockchain"/>
-                    <h5>Blockchain</h5>
-                    <p>Several areas of the platform utilize the blockchain's
-                    verification model to support decentralized and transparent
-                    business practices.  Most importantly: DeepSee's cryptocurrecy
-                    <b>CurrentSee</b>.</p>
-
-                </div>
-            </div>
-
-            </div>
-            
-        </div>
-    </div>
-    
-    <!-- currentsee -->
-    <div id="currentsee" name="currentsee" class="feature">
-
-        <div class="text-center feature-title"> What is CurrentSee? </div>
-
-                <div class="center-block default-text">
-            CurrentSee isn't just some junk coin.  It's a digital asset directly backed by services on the platform.  Advertising is a high demand/large volume service that, given the appropriate metrics, can be traded much like a commodity.  The value of CurrentSee is directly tied to the size of the 
-            DeepSee community--thus ALL holders of CurrentSee have huge incentives to participate in the community and recruit others to the platform.
-        </div>
-
-        <div>
-            <img class="currentsee-img center-block" src="/assets/img/ds-infrastructure.png">
-        </div>
-    </div>
-
-    <div id="timeline" name="timeline" class="feature">
-        <div class="text-center feature-title"> Our TimeLine</div>
-
-        <img class="timeline-img" src="/assets/img/timeline.png"/>
-
-    </div>
-
-    <!-- team -->    
-    <div id="team" name="team" class="feature">
-        <div class="text-center feature-title">Our Team</div>
-
-        <div class="persons">
-
-            <div class="person">
-                <img src="assets/img/travis-garland.png">
-                <h3>Travis Garland</h3>
-                <h5>Chief Executive Officer</h5>
-                <p>3+ years at machine learning startups, 3+ years growth marketing. 
-                    <br/>Prev: Researcher + Growth @PhotoKharma Inc</p>
-            </div>
-            <div class="person">
-                <img src="assets/img/kazi-shezan.png">
-                <h3>Kazi Shezan</h3>
-                <h5>Data Scientist</h5>
-                <p>5+ years Software Development Experience
-                    <br/>Prev: Data Scientist @Infolytx @DataRobin</p>
-            </div>
-            <div class="person">
-                <img src="assets/img/travis-wright.png">
-                <h3>Travis Wright</h3>
-                <h5>Chief Marketing Officer</h5>
-                <p>Host @VentureBeat podcast, columnist for @Inc @VentureBeat
-                    <br> CMO @CCPDigital Prev: SMO @Norton</p>
-            </div>
-            <div class="person">
-                <img src="assets/img/matt-hrushka.png">
-                <h3>Matt Hrushka</h3>
-                <h5>Chief Technology Officer</h5>
-                <p>Award winning technologist and author of  “The Ad War(2014)”. Back-end developer of the Myspace team and negotiated a 900m deal with the company</p>
-            </div>
-            <div class="person">
-                <img src="assets/img/tom-siebert.png">
-                <h3>Tom Siebert</h3>
-                <h5>Head of Public Relations</h5>
-                <p>10+ years experience as award winning journalist, PR &amp; marcomm specialist, TV's "Shark Week" creator.</p>
-            </div>
-            <div class="person">
-                <img src="assets/img/peter-vu.png">
-                <h3>Peter Vu</h3>
-                <h5>UX/UI Architect</h5>
-                <p>4+ years of UI/UX design experience working at AT&amp;T &amp; Tail Light</p>
-            </div>
-            <div class="person">
-                <img src="assets/img/joel-comm.png">
-                <h3>Joel Comm</h3>
-                <h5>Chief Evangelist</h5>
-                <p>NY Times best-selling author, speaker, marketing strategist, technologist, futurist and @BadCrypto co-host</p>
-            </div>
-            <div class="person">
-                <img src="assets/img/adryenn-ashley.png">
-                <h3>Adryenn Ashley</h3>
-                <h5>Chief of Disruption</h5>
-                <p>Award winning actress, author and film makers with a passion for all areas and media formats. Founder of Loly LLC as well as being a successful social influencer with a 100m+ reach. </p>
-            </div>
-            <div class="person">
-                <img src="assets/img/bill-saxton.png">
-                <h3>Bill Saxton</h3>
-                <h5>Full-stack Developer</h5>
-                <p>18+ years of software development and leading teams, working with a multitude of program languages, at Sun Microsystems and Oracle Corporation.</p>
-            </div>
-        </div>
-
-        <div class="text-center feature-title" style="padding-top:20px">Our Advisors</div>
-        <div class="persons">
-            <div class="person">
-                <img src="assets/img/matt-mckibbin.png">
-                <h3>Matt Mckibbin</h3>
-                <h5>Advisor</h5>
-                <p>Decentralization and blockchain entrepreneur. Co-founder of Ubitquity LLC. VP of Business Development at Family Office.</p>
-            </div>
-            <div class="person">
-                <img src="assets/img/tony-simonovsky.png">
-                <h3>Tony Simonovsky</h3>
-                <h5>Advisor</h5>
-                <p>Serial entrepreneur and a growth hacker with a focus on ICOs. In 2017 he joined KickICO to help platform increase exposure of its upcoming ICO to crypto-investors around the world by means of growth marketing.</p>
-            </div>
-            <div class="person">
-                <img src="assets/img/nick-haase.png">
-                <h3>Nick Haase</h3>
-                <h5>Advisor</h5>
-                <p>Founder &amp; CEO of Pixel Road Designs. Managing Partner at Search Engine Journal.</p>
-            </div>
-
-            <div class="person">
-                <img src="assets/img/brent-csutoras.png">
-                <h3>Brent Csutoras</h3>
-                <h5>Advisor</h5>
-                <p>Decentralization and blockchain entrepreneur. Co-founder of Ubitquity LLC. VP of Business Development at Family Office.</p>
-            </div>
-            <div class="person">
-                <img src="assets/img/trent-lapinski.png">
-                <h3>Trent Lapinski</h3>
-                <h5>Advisor</h5>
-                <p>Built and sold various tech companies throughout his twenties.
-                Experienced technology executive.  Former CEO and startup founder.
-            Experience in product marketing, product development, business
-        development, and venture capital.</p>
-            </div>
-            <div class="person">
-                <img src="assets/img/greg-kerr.png">
-                <h3>Greg Kerr</h3>
-                <h5>Advisor</h5>
-                <p>Multi-lingual and seasoned Pentagon analyst, advising on
-                    stabilization and de-escalation in conflicts around the world.  Currently creating renewably-fueled, off-the-grid energy grids 
-                    and partnering with USAID in the implementation of green 
-                    energy solutions.
-            </div>
-        </div>
-    </div>
-
-    <!-- contact -->
-    <div id="contact" name="contact" class="feature"> 
-        <div class="container">
-        <div class="text-center feature-title">Contact Us</div>
-        <form class="center-block" method="post" action="mail.php">
-            <div class="form-group">
-                <input name="name" type="text" placeholder="Enter Full Name"/>
-            </div>
-            <div class="form-group">
-                <input name="email" type="email" placeholder="Enter Email"/>
-            </div>
-            <div class="form-group">
-                <textarea name="message" rows="4" placeholder="Your Message"></textarea>
-            </div>
-            <div class="form-group">
-                <button class="btn btn-success">SEND MESSAGE</button>
-            </div>
-        </form>
-    <!-- </div> -->
-    </div>
-    </div>
-
-    <div id="signup2" class="feature">
-        <div class="container">
-            <div class="text-center feature-title">Sign up for our newsletter &amp; updates</div>
-            <div class="center-block signup-form">
-                <form method="post" action="mail.php">
-                    <div class="input-group">
-                        <input name="email" class="email" type="email"
-                        placeholder="Enter Email" style="width:100%"/>
-                        <span class="input-group-btn">
-                        <button class="btn btn-primary">SIGN UP</button>
-                    </span>
                     </div>
-                </form>
-            </div>
-        </div>
-    </div>
 
-    <footer>
+                    <div class="col-md-4">
+                        <img src="/assets/img/verification.png" 
+                        alt="verification"/>
+                        <h5>Verification</h5>
+                        <p>Users have many different verification options: from completely
+                            anonymous to 3rd-party vetting with skill/profession certification.  Users can use their credentials to 
+                            maximize their "voice" when it comes to content creation,
+                        commenting, and even voting.</p>
+                    </div>
 
-        <div class="container">
+                    <div class="col-md-4">
+                        <img src="/assets/img/blockchain.png" 
+                        alt="blockchain"/>
+                        <h5>Blockchain</h5>
+                        <p>Several areas of the platform utilize the blockchain's
+                            verification model to support decentralized and transparent
+                            business practices.  Most importantly: DeepSee's cryptocurrecy
+                            <b>CurrentSee</b>.</p>
 
-            <div class="row">
-
-                <div class="nav-bar col-sm-6">
-                    <li><a id="home-link" class="nav-a" href="#hero-image-header">HOME</a></li>
-                    <li><a id="about-link" class="nav-a" href="#about">ABOUT</a></li>
-                    <!-- Waiting for FAQ -->
-                    <!-- <li><a id="faq-link" class="nav-a" href="faq.html">FAQ</a></li> -->
-                    <li><a id="contact-link" class="nav-a" href="#contact">CONTACT</a></li>
-                    <li><a class="nav-a" href="assets/pdf/whitepaper.pdf" download>WHITEPAPER</a></li>
-                    <!-- Removing unused blog-->
-                    <!-- <li><a class="nav-a" href="https://medium.com/@deepseeio">BLOG</a></li> -->
+                        </div>
+                    </div>
 
                 </div>
 
-                <div class="social-bar col-sm-6 text-right">
-                    <li>
-                        <a href="https://www.facebook.com/Deepseeio/"><img class="nav-icon-height" src="assets/img/facebook.svg" /></a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/deepseeio?lang=en"><img class="nav-icon-height" src="assets/img/twitter.svg" /></a>
-                    </li>
-                    <li>
-                        <a href="https://medium.com/@deepseeio"><img class="nav-icon-height" src="assets/img/medium.svg" /></a>
-                    </li>
-                    <li>
-                        <a href="https://www.youtube.com/channel/UCfEP4kVI-ezfwDInPHk70vg"><img class="nav-icon-height" src="assets/img/youtube.svg" /></a>
-                    </li>
-                </div>
-
             </div>
-            
-            <hr class="copyright-hr"/>
+        </div>
 
-            <div class="copyright text-center">
+        <!-- currentsee -->
+        <div id="currentsee" name="currentsee" class="feature">
 
-                &copy; 2017 Deepsee.io. - All Rights Reserved
+            <div class="text-center feature-title"> What is CurrentSee? </div>
 
+            <div class="center-block default-text">
+                CurrentSee isn't just some junk coin.  It's a digital asset directly backed by services on the platform.  Advertising is a high demand/large volume service that, given the appropriate metrics, can be traded much like a commodity.  The value of CurrentSee is directly tied to the size of the 
+                DeepSee community--thus ALL holders of CurrentSee have huge incentives to participate in the community and recruit others to the platform.
             </div>
+
+            <div>
+                <img class="currentsee-img center-block" src="/assets/img/ds-infrastructure.png">
+            </div>
+        </div>
+
+        <div id="timeline" name="timeline" class="feature">
+            <div class="text-center feature-title"> Our TimeLine</div>
+
+            <img class="timeline-img" src="/assets/img/timeline.png"/>
 
         </div>
 
-    </footer>    
+        <!-- team -->    
+        <div id="team" name="team" class="feature">
+            <div class="text-center feature-title">Our Team</div>
 
-</body>
+            <div class="persons">
 
-</html>
+                <div class="person">
+                    <img src="assets/img/travis-garland.png">
+                    <h3>Travis Garland</h3>
+                    <h5>Chief Executive Officer</h5>
+                    <p>3+ years at machine learning startups, 3+ years growth marketing. 
+                        <br/>Prev: Researcher + Growth @PhotoKharma Inc</p>
+                    </div>
+                    <div class="person">
+                        <img src="assets/img/kazi-shezan.png">
+                        <h3>Kazi Shezan</h3>
+                        <h5>Data Scientist</h5>
+                        <p>5+ years Software Development Experience
+                            <br/>Prev: Data Scientist @Infolytx @DataRobin</p>
+                        </div>
+                        <div class="person">
+                            <img src="assets/img/travis-wright.png">
+                            <h3>Travis Wright</h3>
+                            <h5>Chief Marketing Officer</h5>
+                            <p>Host @VentureBeat podcast, columnist for @Inc @VentureBeat
+                                <br> CMO @CCPDigital Prev: SMO @Norton</p>
+                            </div>
+                            <div class="person">
+                                <img src="assets/img/matt-hrushka.png">
+                                <h3>Matt Hrushka</h3>
+                                <h5>Chief Technology Officer</h5>
+                                <p>Award winning technologist and author of  “The Ad War(2014)”. Back-end developer of the Myspace team and negotiated a 900m deal with the company</p>
+                            </div>
+                            <div class="person">
+                                <img src="assets/img/tom-siebert.png">
+                                <h3>Tom Siebert</h3>
+                                <h5>Head of Public Relations</h5>
+                                <p>10+ years experience as award winning journalist, PR &amp; marcomm specialist, TV's "Shark Week" creator.</p>
+                            </div>
+                            <div class="person">
+                                <img src="assets/img/peter-vu.png">
+                                <h3>Peter Vu</h3>
+                                <h5>UX/UI Architect</h5>
+                                <p>4+ years of UI/UX design experience working at AT&amp;T &amp; Tail Light</p>
+                            </div>
+                            <div class="person">
+                                <img src="assets/img/joel-comm.png">
+                                <h3>Joel Comm</h3>
+                                <h5>Chief Evangelist</h5>
+                                <p>NY Times best-selling author, speaker, marketing strategist, technologist, futurist and @BadCrypto co-host</p>
+                            </div>
+                            <div class="person">
+                                <img src="assets/img/adryenn-ashley.png">
+                                <h3>Adryenn Ashley</h3>
+                                <h5>Chief of Disruption</h5>
+                                <p>Award winning actress, author and film makers with a passion for all areas and media formats. Founder of Loly LLC as well as being a successful social influencer with a 100m+ reach. </p>
+                            </div>
+                            <div class="person">
+                                <img src="assets/img/bill-saxton.png">
+                                <h3>Bill Saxton</h3>
+                                <h5>Full-stack Developer</h5>
+                                <p>18+ years of software development and leading teams, working with a multitude of program languages, at Sun Microsystems and Oracle Corporation.</p>
+                            </div>
+                        </div>
+
+                        <div class="text-center feature-title" style="padding-top:20px">Our Advisors</div>
+                        <div class="persons">
+                            <div class="person">
+                                <img src="assets/img/matt-mckibbin.png">
+                                <h3>Matt Mckibbin</h3>
+                                <h5>Advisor</h5>
+                                <p>Decentralization and blockchain entrepreneur. Co-founder of Ubitquity LLC. VP of Business Development at Family Office.</p>
+                            </div>
+                            <div class="person">
+                                <img src="assets/img/tony-simonovsky.png">
+                                <h3>Tony Simonovsky</h3>
+                                <h5>Advisor</h5>
+                                <p>Serial entrepreneur and a growth hacker with a focus on ICOs. In 2017 he joined KickICO to help platform increase exposure of its upcoming ICO to crypto-investors around the world by means of growth marketing.</p>
+                            </div>
+                            <div class="person">
+                                <img src="assets/img/nick-haase.png">
+                                <h3>Nick Haase</h3>
+                                <h5>Advisor</h5>
+                                <p>Founder &amp; CEO of Pixel Road Designs. Managing Partner at Search Engine Journal.</p>
+                            </div>
+
+                            <div class="person">
+                                <img src="assets/img/brent-csutoras.png">
+                                <h3>Brent Csutoras</h3>
+                                <h5>Advisor</h5>
+                                <p>Decentralization and blockchain entrepreneur. Co-founder of Ubitquity LLC. VP of Business Development at Family Office.</p>
+                            </div>
+                            <div class="person">
+                                <img src="assets/img/trent-lapinski.png">
+                                <h3>Trent Lapinski</h3>
+                                <h5>Advisor</h5>
+                                <p>Built and sold various tech companies throughout his twenties.
+                                    Experienced technology executive.  Former CEO and startup founder.
+                                    Experience in product marketing, product development, business
+                                development, and venture capital.</p>
+                            </div>
+                            <div class="person">
+                                <img src="assets/img/greg-kerr.png">
+                                <h3>Greg Kerr</h3>
+                                <h5>Advisor</h5>
+                                <p>Multi-lingual and seasoned Pentagon analyst, advising on
+                                    stabilization and de-escalation in conflicts around the world.  Currently creating renewably-fueled, off-the-grid energy grids 
+                                    and partnering with USAID in the implementation of green 
+                                    energy solutions.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- contact -->
+                        <div id="contact" name="contact" class="feature"> 
+                            <div class="container">
+                                <div class="text-center feature-title">Contact Us</div>
+                                <form class="center-block" method="post" action="mail.php">
+                                    <div class="form-group">
+                                        <input name="name" type="text" placeholder="Enter Full Name"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <input name="email" type="email" placeholder="Enter Email"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-success">SEND MESSAGE</button>
+                                    </div>
+                                </form>
+                                <!-- </div> -->
+                            </div>
+                        </div>
+
+                        <div id="signup2" class="feature">
+                            <div class="container">
+                                <div class="text-center feature-title">Sign up for our newsletter &amp; updates</div>
+                                <div class="center-block signup-form">
+                                    <form method="post" action="mail.php">
+                                        <div class="input-group">
+                                            <input name="email" class="email" type="email"
+                                            placeholder="Enter Email" style="width:100%"/>
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-primary">SIGN UP</button>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <footer>
+
+                            <div class="container">
+
+                                <div class="row">
+
+                                    <div class="nav-bar col-sm-6">
+                                        <li><a id="home-link" class="nav-a" href="#hero-image-header">HOME</a></li>
+                                        <li><a id="about-link" class="nav-a" href="#about">ABOUT</a></li>
+                                        <!-- Waiting for FAQ -->
+                                        <!-- <li><a id="faq-link" class="nav-a" href="faq.html">FAQ</a></li> -->
+                                        <li><a id="contact-link" class="nav-a" href="#contact">CONTACT</a></li>
+                                        <li><a class="nav-a" href="assets/pdf/whitepaper.pdf" download>WHITEPAPER</a></li>
+                                        <!-- Removing unused blog-->
+                                        <!-- <li><a class="nav-a" href="https://medium.com/@deepseeio">BLOG</a></li> -->
+
+                                    </div>
+
+                                    <div class="social-bar col-sm-6 text-right">
+                                        <li>
+                                            <a href="https://www.facebook.com/Deepseeio/"><img class="nav-icon-height" src="assets/img/facebook.svg" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://twitter.com/deepseeio?lang=en"><img class="nav-icon-height" src="assets/img/twitter.svg" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://medium.com/@deepseeio"><img class="nav-icon-height" src="assets/img/medium.svg" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.youtube.com/channel/UCfEP4kVI-ezfwDInPHk70vg"><img class="nav-icon-height" src="assets/img/youtube.svg" /></a>
+                                        </li>
+                                    </div>
+
+                                </div>
+
+                                <hr class="copyright-hr"/>
+
+                                <div class="copyright text-center">
+
+                                    &copy; 2017 Deepsee.io. - All Rights Reserved
+
+                                </div>
+
+                            </div>
+
+                        </footer>    
+
+                    </body>
+
+                    </html>
