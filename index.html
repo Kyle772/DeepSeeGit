@@ -57,7 +57,7 @@
         <nav class="navbar navbar-default collapse navbar-collapse">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header hidden-xs">      
+                <div class="navbar-header">      
                     <a class="navbar-brand" href="/#">
                         <img alt="header-logo" src="assets/img/deepsee-header-logo.png" style="height: 40px; width: 144px"/>
                     </a>
@@ -116,23 +116,25 @@
                     SECONDS
                 </span> </div>
             </div>
+
             <div id="signup" class="feature signup">
                 <div class="container">
                     <div class="text-center feature-title">Sign up for our newsletter &amp; updates</div>
                     <div class="center-block signup-form">
+
                         <form method="post" action="mail.php" class="form-inline">
-                            <div class="input-group">
+                            <div class="form-group">
+                                <label class="sr-only" for="email">Email</label>
                                 <input name="email" class="email" type="email"
                                 placeholder="Enter Email"/>
                             </div>
-                                <!-- <span class="input-group-btn"> -->
-                                    <button class="btn btn-success">SIGN UP</button>
-                                <!-- </span> -->
-                            <!-- </div> -->
+                            <button class="btn btn-success">SIGN UP</button>                                
                         </form>
+
                     </div>
                 </div>
             </div>
+
         </div>
 
     </div>
@@ -354,18 +356,16 @@
                         </div>
 
                         <div id="signup2" class="feature signup">
-                            <div class="container">
-                                <div class="text-center feature-title">Sign up for our newsletter &amp; updates</div>
+                            <div class="text-center container">
+                                <div class="feature-title">Sign up for our newsletter &amp; updates</div>
                                 <div class="center-block signup-form">
+
                                     <form method="post" action="mail.php" class="form-inline">
-                                        <div class="input-group">
+                                        <div class="form-group">
                                             <input name="email" class="email" type="email"
                                             placeholder="Enter Email"/>
                                         </div>
-                                            <!-- <span class="input-group-btn"> -->
-                                                <button class="btn btn-success">SIGN UP</button>
-                                            <!-- </span> -->
-                                        <!-- </div> -->
+                                        <button class="btn btn-success">SIGN UP</button>
                                     </form>
                                 </div>
                             </div>
