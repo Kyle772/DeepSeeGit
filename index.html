@@ -42,9 +42,17 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 </head>
 
-<body>
+<body>    
 
     <div class="frontpage-splash">
+
+        <img src="assets/video/background-snapshot.jpg" class="frontpage-splash-video"></img>
+
+        <video loop muted autoplay poster="assets/video/background.jpg" class="frontpage-splash-video hidden-sm">
+            <!-- <source src="videos/big_buck_bunny.webm" type="video/webm"> -->
+            <source src="assets/video/background.mp4" type="video/mp4">
+            <!-- <source src="videos/big_buck_bunny.ogv" type="video/ogg"> -->
+        </video>
 
         <nav class="navbar navbar-default collapse navbar-collapse">
             <div class="container-fluid">
@@ -83,7 +91,8 @@
     </nav>
 
     <div class="text-center">
-        <img id="hero-logo-image" src="assets/img/DeepSee-banner-logo.png" />
+        <!-- <img id="hero-logo-image" src="assets/img/DeepSee-banner-logo.png" /> -->        
+
         <div id="countdown-announcement"> TOKEN <span class="bold">PRE-SALE</span></div>            
         <div id="countdown">
             <div class="timer">
