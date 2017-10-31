@@ -99,6 +99,7 @@ form {
     overflow-y: hidden;
     /*z-index: 2000;*/
     color: white;
+    background-color:rgba(0, 0, 0, 0.3);
 }
 
 .frontpage-splash-video {
@@ -129,7 +130,7 @@ form {
     color: white;
     font-size: 1em;
     font-weight: bold;
-    background-color: inherit;
+    background-color: transparent;
     margin-bottom:100px;
 }
 
