@@ -5,7 +5,7 @@
 }*/
 
 body {
-    font-family: Montserrat, sans-serif;
+    font-family: Roboto, sans-serif;
     font-size: 16px;
     margin: 0;
     overflow: hidden;
@@ -24,19 +24,15 @@ body {
 }*/
 
 h1 {
-    margin: 60px;
     font-size: 3em;
+    font-weight: 300;
+    margin: 30px;
     letter-spacing: -2px;
 }
 
-h2 {
-    font-size: 1.5em;
-}
-
 h3 {
-    font-size: 1em;
+    font-weight: bold;
 }
-
 
 /*general styles*/
 
@@ -131,7 +127,7 @@ form {
     font-size: 1em;
     font-weight: bold;
     background-color: transparent;
-    margin-bottom:100px;
+    margin-bottom:50px;
 }
 
 .navbar-brand {
@@ -144,7 +140,6 @@ form {
 
 .navbar-default .navbar-nav > li > a {
     color: white;
-    font-size: .8em;
 }
 
 .social-nav {
@@ -225,7 +220,7 @@ form {
 }
 
 #hero-text-wide {
-    font-weight: 100;
+    font-weight: 300;
     width: 75%;
     max-width: 750px;
     margin: 0 auto;
@@ -233,7 +228,7 @@ form {
 }
 
 #hero-text-thin {
-    font-weight: 100;
+    font-weight: 300;
     display: none;
     width: 309.9px;
     margin: 0 auto;
@@ -242,8 +237,8 @@ form {
 
 #hero-logo-image {
     width: 150px;
-    margin-top: 20px;
-    margin-bottom: 50px;
+    /*margin-top: 20px;*/
+    margin-bottom: 30px;
 }
 
 .childpage-content {    
@@ -258,24 +253,22 @@ form {
 }
 
 #countdown-announcement {
-    /*font-weight: 100;*/
-    /*height: 40px;*/
+    font-weight: 300;
     margin-bottom: 5px;
-    /*margin-top: 120px;*/
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 .timer {
     /*width: 100px;*/
     /*height: 20px;*/
     display: inline-block;
-    margin: 0 2px;
+    margin: 0 12px;
     /*font-size: 50px;*/
     /*font-weight: bold;*/
 }
 
 .timer-title {
-    font-size: .8em;
+    font-size: .9em;
     clear: both;
 }
 
@@ -343,13 +336,12 @@ form {
     padding: 30px 0;
     width: 100%;
     color: #1E5E96;
-    font-weight: 100;
     text-align: center;
 }
 
 #about-title {
     font-size: 3em;
-    font-weight: 100;
+    font-weight: 300;
     margin: 0 auto;
     /*padding-top: 50px;*/
     padding-bottom: 20px;
@@ -456,7 +448,7 @@ form {
     padding-bottom: 20px;
     padding-top: 60px;
     height: 50px;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 3em;
 }
 
@@ -559,12 +551,6 @@ form {
     height: 40px;
 }
 
-.feature-titles {
-    font-size: 1em;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
 .feature-info {
     font-size: .75em;
 }
@@ -580,7 +566,7 @@ form {
     padding-top: 60px;
     text-align: center;
     margin-bottom: 30px;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 1.5em;
 }
 
@@ -653,14 +639,20 @@ form {
 .feature .default-text {
     max-width: 774px;
     text-align: center;
+    line-height: 1.5em;
 }
 
-.feature-title {
-    font-family: Montserrat, sans-serif;
+/*.feature-title {
     font-size: 3em;
-    font-weight: 100;
+    font-weight: 300;
     margin-bottom: 20px;
     letter-spacing: -1px;
+}*/
+
+.signup-title {
+    font-size: 2em;
+    font-weight: 300;
+    margin-bottom: 20px;
 }
 
 #blue-logo-height {
@@ -744,6 +736,7 @@ form {
 
 .currentsee-img {
     width: 95%;
+    margin-top: 20px;
 }
 
 /* timeline */
@@ -760,6 +753,7 @@ form {
 
 .timeline-img {
     max-width: 80%;
+    margin-top: 24px;
 }
 
 /*team*/
@@ -789,18 +783,16 @@ form {
 }
 
 .person h3 {
-    font-family: Montserrat, sans-serif;
-    font-size: 1.5em;
-    line-height:1.8em;
+    margin-bottom: 0px;
+    font-weight: 300;
 }
 
-.person h5 {
-    font-size: .8em;
-    margin-top: -1em;
+.person h4 {
+    font-weight: bold;
 }
 
 .person p {
-    font-size: .8em;
+    font-size: .9em;
 }
 
 
