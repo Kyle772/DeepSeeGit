@@ -815,6 +815,11 @@ form {
     width: 100%;
 }
 
+#signup input {
+    background: transparent;
+    color: white;
+}
+
 #signup2 {
     background-color: #1C466F;
 }
