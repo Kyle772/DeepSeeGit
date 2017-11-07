@@ -232,6 +232,10 @@ form {
     font-weight: bold;
 }
 
+#datePrettyElement {
+    margin-top:10px;
+}
+
 #scroller-image {
     padding-top: 79px;
     height: 60px;
