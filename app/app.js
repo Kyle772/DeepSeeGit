@@ -5,11 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
 let dayElement = document.getElementById('dayElement');
 let hourElement = document.getElementById('hourElement');
 let minuteElement = document.getElementById('minuteElement');
-let seceondElement = document.getElementById('seceondElement');
+let secondElement = document.getElementById('secondElement');
 
 // countdown
-
-let countDownDate = new Date('Nov 11, 2017 12:00:00').getTime();
+let countDownDate = Date.UTC(2017, 10, 14, 0, 0, 1);
 
 let x = setInterval(() => {
 
