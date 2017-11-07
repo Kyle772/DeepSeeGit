@@ -29,8 +29,8 @@ EOD;
 }
 
 $from = new SendGrid\Email(null, $_POST['email']);
-// $to = new SendGrid\Email(null, 'admin@deepsee.io');
-$to = new SendGrid\Email(null, 'saxton@gmail.com');
+$to = new SendGrid\Email(null, 'admin@deepsee.io');
+// $to = new SendGrid\Email(null, 'saxton@gmail.com');
 
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
@@ -38,7 +38,7 @@ $apiKey = getenv('SENDGRID_API_KEY');
 $sg = new \SendGrid($apiKey);
 
 $response = $sg->client->mail()->send()->post($mail);
-// echo $response->statusCode();
-// echo $response->headers();
-// echo $response->body();
-header('Location: index.html');
+echo $response->statusCode();
+echo $response->headers();
+echo $response->body();
+// header('Location: index.html');
