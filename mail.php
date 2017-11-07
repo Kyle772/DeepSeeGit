@@ -28,9 +28,10 @@ EOD;
     $content = new SendGrid\Content("text/plain", $_POST['email']);
 }
 
+$contact_email = getenv('CONTACT_EMAIL');
+
 $from = new SendGrid\Email(null, $_POST['email']);
-$to = new SendGrid\Email(null, 'admin@deepsee.io');
-// $to = new SendGrid\Email(null, 'saxton@gmail.com');
+$to = new SendGrid\Email(null, $contact_email);
 
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
