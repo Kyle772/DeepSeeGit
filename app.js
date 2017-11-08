@@ -36,8 +36,15 @@ app.use(session({
 app.use(flash());
 app.use(compression());
 
+// data files
+var persons = require('./data/persons');
+
 app.get('/', function(req, res) {
-    res.render('index', { flashMsg: req.flash('flashMsg')});
+    res.render('index', { 
+        flashMsg: req.flash('flashMsg'),
+        team: persons.team,
+        advisors: persons.advisors
+    });
 });
 
 // setup email/sendgrid

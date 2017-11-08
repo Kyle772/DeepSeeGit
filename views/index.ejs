@@ -129,7 +129,7 @@
 
             <div id="signup" class="feature signup">
                 <div class="container">
-                    <div class="text-center signup-title">Sign up for our newsletter &amp; updates</div>
+                    <div class="text-center signup-title">Sign up for our pre-sale &amp; updates</div>
                     <div class="center-block signup-form">
 
                         <form method="post" action="/signup" class="form-inline">
@@ -199,236 +199,143 @@
                             business practices.  Most importantly: DeepSee's cryptocurrecy
                             <b>CurrentSee</b>.</p>
 
-                        </div>
                     </div>
-
                 </div>
-
-            </div>
-        </div>
-
-        <!-- currentsee -->
-        <div id="currentsee" name="currentsee" class="feature">
-
-            <h1 class="text-center"> What is CurrentSee? </h1>
-
-            <div class="center-block default-text">
-                CurrentSee isn't just some junk coin.  It's a digital asset directly backed by services on the platform.  Advertising is a high demand/large volume service that, given the appropriate metrics, can be traded much like a commodity.  The value of CurrentSee is directly tied to the size of the 
-                DeepSee community--thus ALL holders of CurrentSee have huge incentives to participate in the community and recruit others to the platform.
             </div>
 
-            <div>
-                <img class="currentsee-img center-block" src="/img/ds-infrastructure.png">
-            </div>
+        </div>
+    </div>
+
+    <!-- currentsee -->
+    <div id="currentsee" name="currentsee" class="feature">
+
+        <h1 class="text-center"> What is CurrentSee? </h1>
+
+        <div class="center-block default-text">
+            CurrentSee isn't just some junk coin.  It's a digital asset directly backed by services on the platform.  Advertising is a high demand/large volume service that, given the appropriate metrics, can be traded much like a commodity.  The value of CurrentSee is directly tied to the size of the 
+            DeepSee community--thus ALL holders of CurrentSee have huge incentives to participate in the community and recruit others to the platform.
         </div>
 
-        <div id="timeline" name="timeline" class="feature">
-            <h1 class="text-center"> Our TimeLine</h1>
+        <div>
+            <img class="currentsee-img center-block" src="/img/ds-infrastructure.png">
+        </div>
+    </div>
 
-            <img class="timeline-img" src="/img/timeline.png"/>
+    <div id="timeline" name="timeline" class="feature">
+        <h1 class="text-center"> Our TimeLine</h1>
 
+        <img class="timeline-img" src="/img/timeline.png"/>
+
+    </div>
+
+    <!-- team -->    
+    <div id="team" name="team" class="feature">
+        <h1 class="text-center">Our Team</h1>
+
+        <div class="persons">
+            <% for(var i=0; i<team.length; i++) { %>
+                <div class="person">
+                    <img src="img/<%= team[i].img %>">
+                    <h3><%- team[i].name %></h3>
+                    <h4><%- team[i].title %></h4>
+                    <p><%- team[i].bio %>
+                    </p>
+                </div>
+            <% } %>
         </div>
 
-        <!-- team -->    
-        <div id="team" name="team" class="feature">
-            <h1 class="text-center">Our Team</h1>
+        <h1 class="text-center">Our Advisors</h1>
 
             <div class="persons">
-
-                <div class="person">
-                    <img src="img/travis-garland.png">
-                    <h3>Travis Garland</h3>
-                    <h4>Chief Executive Officer</h4>
-                    <p>3+ years at machine learning startups, 3+ years growth marketing. 
-                        <br/>Prev: Researcher + Growth @PhotoKharma Inc</p>
-                    </div>
+                <% for(var i=0; i<advisors.length; i++) { %>
                     <div class="person">
-                        <img src="img/kazi-shezan.png">
-                        <h3>Kazi Shezan</h3>
-                        <h4>Data Scientist</h4>
-                        <p>5+ years Software Development Experience
-                            <br/>Prev: Data Scientist @Infolytx @DataRobin</p>
-                        </div>
-                        <div class="person">
-                            <img src="img/travis-wright.png">
-                            <h3>Travis Wright</h3>
-                            <h4>Chief Marketing Officer</h4>
-                            <p>Host @VentureBeat podcast, columnist for @Inc @VentureBeat
-                                <br> CMO @CCPDigital Prev: SMO @Norton</p>
-                            </div>
-                            <div class="person">
-                                <img src="img/matt-hrushka.png">
-                                <h3>Matt Hrushka</h3>
-                                <h4>Chief Technology Officer</h4>
-                                <p>Award winning technologist and author of  “The Ad War(2014)”. Back-end developer of the Myspace team and negotiated a 900m deal with the company</p>
-                            </div>
-                            <div class="person">
-                                <img src="img/tom-siebert.png">
-                                <h3>Tom Siebert</h3>
-                                <h4>Head of Public Relations</h4>
-                                <p>10+ years experience as award winning journalist, PR &amp; marcomm specialist, TV's "Shark Week" creator.</p>
-                            </div>
-                            <div class="person">
-                                <img src="img/peter-vu.png">
-                                <h3>Peter Vu</h3>
-                                <h4>UX/UI Architect</h4>
-                                <p>4+ years of UI/UX design experience working at AT&amp;T &amp; Tail Light</p>
-                            </div>
-                            <div class="person">
-                                <img src="img/joel-comm.png">
-                                <h3>Joel Comm</h3>
-                                <h4>Chief Evangelist</h4>
-                                <p>NY Times best-selling author, speaker, marketing strategist, technologist, futurist and @BadCrypto co-host</p>
-                            </div>
-                            <div class="person">
-                                <img src="img/adryenn-ashley.png">
-                                <h3>Adryenn Ashley</h3>
-                                <h4>Chief of Disruption</h4>
-                                <p>Award winning actress, author and film makers with a passion for all areas and media formats. Founder of Loly LLC as well as being a successful social influencer with a 100m+ reach. </p>
-                            </div>
-                            <div class="person">
-                                <img src="img/bill-saxton.png">
-                                <h3>Bill Saxton</h3>
-                                <h4>Full-stack Developer</h4>
-                                <p>18+ years of software development and leading teams, working with a multitude of program languages, at Sun Microsystems and Oracle Corporation.</p>
-                            </div>
-                            <div class="person">
-                                <img src="img/andrew-bart.png">
-                                <h3>Andrew Bart</h3>
-                                <h4>Chief Growth Officer</h4>
-                                <p>Early growth stage venture capital investor, advisor, and C-Suite executive. Initiated startup team at iCrossing which ultimately exited to Hearst Corporation for $325 million.  Founded, bootstrapped, and successfully exited a supply chain management and lead generation technology platform to a global pet product manufacturer.
-                                </div>
-                            </div>
-                        </div>
+                        <img src="img/<%= advisors[i].img %>">
+                        <h3><%- advisors[i].name %></h3>
+                        <h4><%- advisors[i].title %></h4>
+                        <p><%- advisors[i].bio %>
+                        </p>
+                    </div>
+                <% } %>
+            </div>
 
-                        <div class="text-center feature-title" style="padding-top:20px">Our Advisors</div>
-                        <div class="persons">
-                            <div class="person">
-                                <img src="img/matt-mckibbin.png">
-                                <h3>Matt Mckibbin</h3>
-                                <h4>Advisor</h4>
-                                <p>Decentralization and blockchain entrepreneur. Co-founder of Ubitquity LLC. VP of Business Development at Family Office.</p>
-                            </div>
-                            <div class="person">
-                                <img src="img/tony-simonovsky.png">
-                                <h3>Tony Simonovsky</h3>
-                                <h4>Advisor</h4>
-                                <p>Serial entrepreneur and a growth hacker with a focus on ICOs. In 2017 he joined KickICO to help platform increase exposure of its upcoming ICO to crypto-investors around the world by means of growth marketing.</p>
-                            </div>
-                            <div class="person">
-                                <img src="img/nick-haase.png">
-                                <h3>Nick Haase</h3>
-                                <h4>Advisor</h4>
-                                <p>Founder and CEO of Loot--a startup paving the way for the future of marketing and co-founder of StartupDrugz.
-                                Rich background in consulting, speaking, VR/AR, and medical devices.</p>
-                            </div>
+            <!-- contact -->
+            <div id="contact" name="contact" class="feature"> 
+                <div class="container">
+                    <h1 class="text-center feature-title">Contact Us</h1>
+                    <form class="center-block" method="post" action="/contact">
+                <!-- <div class="form-group">
+                    <input name="name" type="text" placeholder="Enter Full Name"/>
+                </div> -->
+                <div class="form-group">
+                    <input name="email" type="email" placeholder="Enter Email"/>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success">SEND MESSAGE</button>
+                </div>
+            </form>
+            <!-- </div> -->
+        </div>
+    </div>
 
-                            <div class="person">
-                                <img src="img/brent-csutoras.png">
-                                <h3>Brent Csutoras</h3>
-                                <h4>Advisor</h4>
-                                <p>Founder &amp; CEO of Pixel Road Designs.  Managing Partner at Search Engine Journal.</p>
-                            </div>
-                            <div class="person">
-                                <img src="img/trent-lapinski.png">
-                                <h3>Trent Lapinski</h3>
-                                <h4>Advisor</h4>
-                                <p>Built and sold various tech companies throughout his twenties.
-                                    Experienced technology executive.  Former CEO and startup founder.
-                                    Experience in product marketing, product development, business
-                                development, and venture capital.</p>
-                            </div>
-                            <div class="person">
-                                <img src="img/greg-kerr.png">
-                                <h3>Greg Kerr</h3>
-                                <h4>Advisor</h4>
-                                <p>Multi-lingual and seasoned Pentagon analyst, advising on
-                                    stabilization and de-escalation in conflicts around the world.  Currently creating renewably-fueled, off-the-grid energy grids 
-                                    and partnering with USAID in the implementation of green 
-                                    energy solutions.
-                                </div>
-                            </div>
-                        </div>
+    <div id="signup2" class="feature signup">
+        <div class="text-center container">
+            <div class="signup-title">Sign up for our pre-sale &amp; updates</div>
+            <div class="center-block signup-form">
 
-                        <!-- contact -->
-                        <div id="contact" name="contact" class="feature"> 
-                            <div class="container">
-                                <h1 class="text-center feature-title">Contact Us</h1>
-                                <form class="center-block" method="post" action="/contact">
-                                    <!-- <div class="form-group">
-                                        <input name="name" type="text" placeholder="Enter Full Name"/>
-                                    </div> -->
-                                    <div class="form-group">
-                                        <input name="email" type="email" placeholder="Enter Email"/>
-                                    </div>
-                                    <div class="form-group">
-                                        <textarea name="message" rows="4" placeholder="Your Message"></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <button class="btn btn-success">SEND MESSAGE</button>
-                                    </div>
-                                </form>
-                                <!-- </div> -->
-                            </div>
-                        </div>
+                <form method="post" action="/signup" class="form-inline">
+                    <div class="form-group">
+                        <input name="email" class="email" type="email"
+                        placeholder="Enter Email"/>
+                    </div>
+                    <button class="btn btn-success">SIGN UP</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
-                        <div id="signup2" class="feature signup">
-                            <div class="text-center container">
-                                <div class="signup-title">Sign up for our newsletter &amp; updates</div>
-                                <div class="center-block signup-form">
+    <footer>
 
-                                    <form method="post" action="/signup" class="form-inline">
-                                        <div class="form-group">
-                                            <input name="email" class="email" type="email"
-                                            placeholder="Enter Email"/>
-                                        </div>
-                                        <button class="btn btn-success">SIGN UP</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-
-                        <footer>
-
-                                <nav class="navbar navbar-default collapse navbar-collapse">
+        <nav class="navbar navbar-default collapse navbar-collapse">
             <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">      
-                <a class="navbar-brand" href="/#">
-                    <img alt="header-logo" src="img/deepsee-header-logo.png" style="height: 40px; width: 144px"/>
-                </a>
-            </div>
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">      
+                    <a class="navbar-brand" href="/#">
+                        <img alt="header-logo" src="img/deepsee-header-logo.png" style="height: 40px; width: 144px"/>
+                    </a>
+                </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div>
 
-                <ul class="nav navbar-nav navbar-right social-nav">
-                    <li>
-                        <a href="https://www.facebook.com/Deepseeio/"><i class="fa fa-lg fa-facebook"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/deepseeio?lang=en"><i class="fa fa-lg fa-twitter"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://medium.com/@deepseeio"><i class="fa fa-lg fa-medium"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://www.youtube.com/channel/UCfEP4kVI-ezfwDInPHk70vg"><i class="fa fa-lg fa-youtube-play"></i></a>
-                    </li>
-                </ul>
+                    <ul class="nav navbar-nav navbar-right social-nav">
+                        <li>
+                            <a href="https://www.facebook.com/Deepseeio/"><i class="fa fa-lg fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/deepseeio?lang=en"><i class="fa fa-lg fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://medium.com/@deepseeio"><i class="fa fa-lg fa-medium"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCfEP4kVI-ezfwDInPHk70vg"><i class="fa fa-lg fa-youtube-play"></i></a>
+                        </li>
+                    </ul>
 
-                <ul class="nav navbar-nav navbar-right link-nav">
-                    <li><a href="/#about">ABOUT</a></li>
-                    <li><a href="/#contact">CONTACT</a></li>   
-                    <li><a href="pdf/whitepaper.pdf">WHITEPAPER</a></li>   
-                </ul>
-            </div>
-        </div><!-- /.container-fluid -->
-    </nav>
+                    <ul class="nav navbar-nav navbar-right link-nav">
+                        <li><a href="/#about">ABOUT</a></li>
+                        <li><a href="/#contact">CONTACT</a></li>   
+                        <li><a href="pdf/whitepaper.pdf">WHITEPAPER</a></li>   
+                    </ul>
+                </div>
+            </div><!-- /.container-fluid -->
+        </nav>
         <div class="copyright text-center">
             &copy; 2017 Deepsee.io. - All Rights Reserved
         </div>
-
 
     </footer>    
 
