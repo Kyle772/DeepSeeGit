@@ -42,13 +42,13 @@ module.exports = {
         //     img: 'yanni-gu.png',
         //     name: 'Yanni Gu',
         //     title: 'Content Director',
-        //     bio: `Seasoned digital marketing professional working with startups and Fortune 100/500 brands.  Built up Content Marking division @Convario from 1 -> 12 employees and $500K -> $5M+ in annual revenue.    `            
+        //     bio: `Seasoned digital marketing professional working with startups and Fortune 100/500 brands.  Built up Content Marking division @Convario from 1 -> 12 employees and $500K -> $5M+ in annual revenue.`            
         // },
         // { 
         //     img: 'barbara-brickham.png',
         //     name: 'Barbara Brickham',
         //     title: 'Blockchain Director',
-        //     bio: `Award-winning developer, technologist, and philanthropistwith 20+ years of development experience. CTO for multiple web, mobile, ai, and IoT ventures. Involved with blockchain and cryptocurrency since 2015.`            
+        //     bio: `Award-winning developer, technologist, and philanthropist with 20+ years of development experience. CTO for multiple web, mobile, AI, and IoT ventures. Involved with blockchain and cryptocurrency since 2015.`            
         // },
         { 
             img: 'kazi-shezan.png',
