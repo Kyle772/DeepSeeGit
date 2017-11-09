@@ -38,18 +38,18 @@ module.exports = {
             title: 'Chief of Disruption',
             bio: `Award winning actress, author and film makers with a passion for all areas and media formats. Founder of Loly LLC as well as being a successful social influencer with a 100M+ reach. `
         },
-        // { 
-        //     img: 'yanni-gu.png',
-        //     name: 'Yanni Gu',
-        //     title: 'Content Director',
-        //     bio: `Seasoned digital marketing professional working with startups and Fortune 100/500 brands.  Built up Content Marking division @Convario from 1 -> 12 employees and $500K -> $5M+ in annual revenue.`            
-        // },
-        // { 
-        //     img: 'barbara-brickham.png',
-        //     name: 'Barbara Brickham',
-        //     title: 'Blockchain Director',
-        //     bio: `Award-winning developer, technologist, and philanthropist with 20+ years of development experience. CTO for multiple web, mobile, AI, and IoT ventures. Involved with blockchain and cryptocurrency since 2015.`            
-        // },
+        { 
+            img: 'yanni-gu.png',
+            name: 'Yanni Gu',
+            title: 'Content Director',
+            bio: `Seasoned digital marketing professional working with startups and Fortune 100/500 brands.  <br/>Prev: Director @Convario and @iProspect`            
+        },
+        { 
+            img: 'barbara-bickham.png',
+            name: 'Barbara Bickham',
+            title: 'Blockchain Director',
+            bio: `Award-winning developer, technologist, and philanthropist with 20+ years of development experience. CTO for multiple web, mobile, AI, and IoT ventures. Involved with blockchain and cryptocurrency since 2015.`            
+        },
         { 
             img: 'kazi-shezan.png',
             name: 'Kazi Shezan',
