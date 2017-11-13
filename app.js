@@ -58,6 +58,21 @@ var mcApiKey = process.env.MAILCHIMP_API_KEY;
 var mcInstance = process.env.MAILCHIMP_INSTANCE;
 var mcListId = process.env.MAILCHIMP_SUBSCRIBER_LIST_ID;
 
+// handle a signup via Instant Access
+
+app.get('/signup-ia', function(req, res) {
+
+    var code = req.param('code');
+    var state = req.param('state');
+
+    req.flash('flashMsg', 'IA callback succeeded');
+    req.flash('flashMsg', ` CODE: ${code}`);
+    req.flash('flashMsg', ` STATE: ${state}`);
+    res.redirect(301, '/');
+    return;
+
+});
+
 // handle a signup submission
 app.post('/signup', function(req, res) {
 
