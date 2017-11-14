@@ -127,54 +127,16 @@ form {
     padding: 5px 15px;
 }
 
-.navbar-default {
+.navbar-custom {
     border-color: transparent;
 }
 
-.navbar-default .navbar-nav > li > a {
+.navbar-custom .navbar-nav > li > a {
     color: white;
 }
 
 .social-nav {
     margin-right: 20px;
-}
-
-/* old navbar */
-
-.nav-a {
-    text-decoration: none;
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-.nav-icon-height {
-    height: 20px;
-}
-
-.hero-nav-bar,
-#hero-nav-bar,
-#hero-nav-bar-childpages {
-    height: 60px;
-    padding: 5px;
-}
-
-#hero-nav-bar .row {
-    display: flex;
-    align-items: center;
-}
-
-#hero-nav-bar-childpages {
-    background-color: #1E5E96;
-    color: #1C466F;
-}
-
-#top-left-logo {
-    padding-top: 20px;
-    padding-left: 40px;
-    width: 129px;
-    height: 29px;
-    float: left;
 }
 
 #hero-image-header {
