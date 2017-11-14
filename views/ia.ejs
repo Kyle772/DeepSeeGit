@@ -1,0 +1,105 @@
+<html><body>
+
+<!-- IA Authentication -->
+  <script type="text/javascript">
+    window.onload = function(e){
+      var client_id = '13';
+      var client_secret = 'Qtee7huqam5JAm4ZRmLivy3Lr6vUDbBtMfSU1Z8t';
+
+      function successIA(usernameOrEmail) {
+        // Handle successLogin in IA
+        // Example: window.location = 'IACompleteRegisteration.php?iaUser='+usernameOrEmail
+        window.location = '/signup-ia-redirect';
+        // window.location = '/';
+      }
+
+      function deniedIA(message) {
+        alert(message);
+      }
+
+      function timeoutIA(message) {
+        alert(message);
+      }
+
+
+      document.getElementById('ia-framework-login').src = 'https://dashboard.instantaccess.io/api/partner/authorize/view?client_id='+client_id+'&client_secret='+client_secret;
+      //listen to ia back
+      window.addEventListener('message',function(event) {
+
+        console.log(event);
+
+        if(event.origin !== 'https://dashboard.instantaccess.io') return;
+        if(event.data.action === 'alert')
+          alert(event.data.message);
+        else if(event.data.action === 'closeframe') {
+          document.getElementById("ia-btn").style.display = "block";
+          fade(document.getElementById("ia-framework-login"));
+          //document.getElementById("ia-framework-login").style.display = "none";
+        }
+        else if(event.data.action === 'auth') {
+          switch (event.data.status) {
+            case 'success':
+              successIA(event.data.usernameOrEmail);
+              break;
+            case 'denied':
+              deniedIA(event.data.message);
+              break;
+            case 'timeout':
+              timeoutIA(event.data.message);
+              break;
+          }
+        }
+      },false);
+    }
+
+    function iaButtonClicked() {
+      unfade(document.getElementById("ia-framework-login"));
+      //document.getElementById("ia-framework-login").style.display = "block";
+      document.getElementById("ia-btn").style.display = "hidden";
+    }
+
+    function fade(element) {
+      var op = 1;  // initial opacity
+      var timer = setInterval(function () {
+        if (op <= 0.1){
+          clearInterval(timer);
+          element.style.display = 'none';
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op -= op * 0.1;
+      }, 10);
+    }
+
+    function unfade(element) {
+      var op = 0.1;  // initial opacity
+      element.style.display = 'block';
+      var timer = setInterval(function () {
+        if (op >= 1){
+          clearInterval(timer);
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op += op * 0.1;
+      }, 5);
+    }
+  </script>
+  <div style="display: inline-block; position: relative; margin-top: 200px; margin-left: 200px">
+    <button type="button" onclick="iaButtonClicked()" id="ia-btn" style="background-color: #4A4A4A; border-width: 0; padding: 0; width: 56px; height: 56px; border-radius:10px;">
+      <img src="https://dashboard.instantaccess.io/upload/image/whitelogo.svg"/>
+    </button>
+    <iframe id="ia-framework-login" src="" width="170" height="215" frameBorder="0" style="display:none; border-radius:10px; z-index: 1000; position: absolute; left: 0px; bottom: 0px;"></iframe>
+  </div>
+  <style>
+    #ia-btn:focus {
+      outline-width: 0;
+    }
+    #ia-btn:hover {
+      opacity: 0.9;
+      cursor: pointer;
+    }
+  </style>
+  <!-- End of login with IA -->
+
+
+</body></html>

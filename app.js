@@ -13,6 +13,7 @@ var bodyParser = require('body-parser');
 // external apis
 var sendgrid = require('@sendgrid/mail');
 var request = require('request');
+const sagent = require('superagent');
 
 var app = express();
 var sessionStore = new session.MemoryStore;
@@ -51,6 +52,12 @@ app.get('/', function(req, res) {
     });
 });
 
+app.get('/ia', function(req, res) {
+    res.render('ia', { 
+
+    });
+});
+
 // setup email/sendgrid/mailchimp
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 var contact_email = process.env.CONTACT_EMAIL;
@@ -58,19 +65,136 @@ var mcApiKey = process.env.MAILCHIMP_API_KEY;
 var mcInstance = process.env.MAILCHIMP_INSTANCE;
 var mcListId = process.env.MAILCHIMP_SUBSCRIBER_LIST_ID;
 
-// handle a signup via Instant Access
+// IA constants
+
+const IA_API = 'https://dashboard.instantaccess.io';
+const IA_CLIENT_ID = '13';
+const IA_CLIENT_SECRET = 'Qtee7huqam5JAm4ZRmLivy3Lr6vUDbBtMfSU1Z8t';
+
+// retrieves a user access token from IA given a IA code and user information 
+// (state);
+
+const getIaToken = (iaCode, iaState) => {
+
+    return new Promise((resolve, reject) => {
+
+        sagent
+        .post(`${IA_API}/api/oauth/token?code=${iaCode}&state=${iaState}`)
+        .send( {
+            client_id: IA_CLIENT_ID,
+            client_secret: IA_CLIENT_SECRET,
+            code: iaCode,
+            redirect_uri: "https://wfsaxton-deepsee.herokuapp.com/signup-ia",
+            grant_type: 'authorization_code'
+        })
+        .set('accept', 'json')
+        .end((error, res) => {
+            if (error) {
+                console.error("ERROR:getIaToken");
+                console.error(error);
+                reject(error);
+            } else {
+                resolve(res.body.access_token);
+            }        
+        })
+    });
+};
+
+// retrieves user data from IA given a user access token
+
+const getIaData = (iaToken) => {
+
+    return new Promise((resolve, reject) => {
+
+        sagent
+        .get(`${IA_API}/api/public/user`)
+        .set('Content-Type', 'application/json')
+        .set('Authorization', `Bearer ${iaToken}`)
+        .end((error, res) => {
+            if (error) {
+                console.error("ERROR: getIaData");
+                console.error(error);
+                reject(error);
+            } else {
+                resolve(res.body.data);
+            }  
+        });
+    });
+};
+
+const subscribeEmail = (email) => {
+
+    return new Promise((resolve, reject) => {
+
+        // set up the mailchimp post options
+        var options = { method: 'POST',
+        url: 'https://'+ mcInstance +'.api.mailchimp.com/3.0/lists/'+ mcListId +'/members/',
+        headers: 
+        { 
+            'postman-token': '35c708d5-55bc-f828-90b6-d8dc5e01c3dc',
+            'cache-control': 'no-cache',
+            authorization: 'Basic ' + mcApiKey,
+            'content-type': 'application/json' },
+            body: 
+            { 
+                email_address: email,
+                status: 'subscribed' 
+            },
+            json: true 
+        };
+
+        request(options, function (error, response, body) {
+            if (error) {
+                reject(error);
+            } else {
+                resolve(true);
+            }        
+        });
+    });
+};
+
+function getEmailFromIaData(iaData) {
+
+    for(var i = 0; i < iaData.length; i++) {
+
+        if(iaData[i].attribute.trim() === "Emails") {            
+            return iaData[i].value;
+        }
+    }
+
+    return "saxton+bademail@gmail.com";
+}
+
+// Instant Access callback
 
 app.get('/signup-ia', function(req, res) {
 
-    var code = req.param('code');
-    var state = req.param('state');
+    let iaCode = req.param('code');
+    let iaState = req.param('state');
+    
+    console.log(`CODE: ${iaCode}, STATE: ${iaState}`);
 
-    req.flash('flashMsg', 'IA callback succeeded');
-    req.flash('flashMsg', ` CODE: ${code}`);
-    req.flash('flashMsg', ` STATE: ${state}`);
+    getIaToken(iaCode, iaState)
+    .then(getIaData)
+    .then((iaData) => {
+        let email = getEmailFromIaData(iaData);
+        return email;
+    })
+    .then(subscribeEmail)
+    .catch((error) => {
+        console.log(`SIGNUP-AI ERROR: ${error}`);
+    });
+
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify({ success: true }));
+});
+
+// handle a signup via IA redirection
+
+app.get('/signup-ia-redirect', function(req, res) {
+
+    req.flash('flashMsg', 'You have been successfully subscribed.');
     res.redirect(301, '/');
-    return;
-
 });
 
 // handle a signup submission
@@ -112,42 +236,6 @@ app.post('/signup', function(req, res) {
         }        
         res.redirect(301, '/');
     });
-
-
-    // agent
-    //     .post('https://' + mcInstance + '.api.mailchimp.com/3.0/lists/' + mcListId + '/members/')
-    //     .set('Content-Type', 'application/json;charset=utf-8')
-    //     .set('Authorization', 'Basic ' + new Buffer('any:' + mcApiKey ).toString('base64'))
-    //     .send({
-    //       'email_address': req.body.email,
-    //       'status': 'subscribed'
-    //     })
-    //     .end(function(err, response) {
-    //       if (response.status < 300 || (response.status === 400 && response.body.title === "Member Exists")) {
-    //         res.send('Signed Up!');
-    //       } else {
-    //         res.send('Sign Up Failed :(');
-    //       }
-    //     });
-      
-    // // create the email message  
-    // const message = {
-    //     to: contact_email,
-    //     from: req.body.email,
-    //     subject: 'Subscription request for DeepSee.io',
-    //     text: req.body.email
-    // }
-
-    // // send the message and flash the result
-    // sendgrid.send(message)
-    // .then(function(result) {
-    //     flashMsg = 'You have been successfully subscribed.';    
-    // }).catch(function(error) {
-    //     flashMsg = 'Subscription failed.  Please email '+ contact_email +' directly.';
-    // }).then(() => {
-    //     req.flash('flashMsg', flashMsg);
-    //     res.redirect(301, '/');
-    // });
 
 });
 
