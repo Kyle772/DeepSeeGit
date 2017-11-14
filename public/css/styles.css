@@ -114,6 +114,14 @@ form {
     color: white;
 }
 
+.collapse.in {
+    /*display: flex;*/
+}
+
+#myNavbar {
+    /*display: flex;*/
+}
+
 .navbar {
     text-decoration: none;
     color: white;
@@ -121,6 +129,13 @@ form {
     font-weight: bold;
     background-color: transparent;
     margin-bottom:50px;
+}
+
+/* hacks the hamburger menu to split social nav and link nav
+ into 2 columns */
+
+#myNavbar ul {
+    float: left;
 }
 
 .navbar-brand {
