@@ -114,7 +114,12 @@
                                 <input name="email" class="email" type="email"
                                 placeholder="Enter Email"/>
                             </div>
-                            <button class="btn btn-success">SIGN UP</button>                                
+                            <button class="btn btn-success">SIGN UP</button>
+
+                            <span style="color:white"> OR </span>
+
+                            <%- include('partials/instantaccess', {id: ""}); %>
+                                                          
                         </form>
 
                     </div>
@@ -265,6 +270,10 @@
                         placeholder="Enter Email"/>
                     </div>
                     <button class="btn btn-success">SIGN UP</button>
+
+                    <span style="color:white"> OR </span>
+
+                    <%- include('partials/instantaccess', {id: 2}); %>
                 </form>
             </div>
         </div>

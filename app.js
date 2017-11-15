@@ -191,10 +191,9 @@ app.get('/signup-ia', function(req, res) {
 
 // handle a signup via IA redirection
 
-app.get('/signup-ia-redirect', function(req, res) {
-
+app.get('/signup-redirect', function(req, res) {
     req.flash('flashMsg', 'You have been successfully subscribed.');
-    res.redirect(301, '/');
+    res.redirect(302, '/?' + Date.now());
 });
 
 // handle a signup submission

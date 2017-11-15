@@ -540,12 +540,9 @@ form {
     line-height: 1.5em;
 }
 
-/*.feature-title {
-    font-size: 3em;
-    font-weight: 300;
-    margin-bottom: 20px;
-    letter-spacing: -1px;
-}*/
+iframe body {
+    background-color: #5cb85c !important;
+}
 
 .signup-title {
     font-size: 2em;
