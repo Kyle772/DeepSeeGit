@@ -3,6 +3,7 @@ var express = require('express');
 var session = require('express-session');
 var flash = require('express-flash');
 var compression = require('compression');
+var enforce = require('express-sslify');
 
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -40,6 +41,7 @@ app.use(session({
 }));
 app.use(flash());
 app.use(compression());
+app.use(enforce.HTTPS({ trustProtoHeader: true }));
 
 // data files
 var persons = require('./data/persons');
