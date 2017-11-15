@@ -67,6 +67,8 @@ var mcListId = process.env.MAILCHIMP_SUBSCRIBER_LIST_ID;
 
 // IA constants
 
+const MY_DOMAIN = 'https://www.deepsee.io';
+// const MY_DOMAIN = 'https://wfsaxton-deepsee.herokuapp.com/';
 const IA_API = 'https://dashboard.instantaccess.io';
 const IA_CLIENT_ID = '13';
 const IA_CLIENT_SECRET = 'Qtee7huqam5JAm4ZRmLivy3Lr6vUDbBtMfSU1Z8t';
@@ -84,7 +86,7 @@ const getIaToken = (iaCode, iaState) => {
             client_id: IA_CLIENT_ID,
             client_secret: IA_CLIENT_SECRET,
             code: iaCode,
-            redirect_uri: "https://wfsaxton-deepsee.herokuapp.com/signup-ia",
+            redirect_uri: `${MY_DOMAIN}/signup-ia`,
             grant_type: 'authorization_code'
         })
         .set('accept', 'json')
