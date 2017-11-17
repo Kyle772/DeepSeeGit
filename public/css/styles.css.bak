@@ -43,9 +43,12 @@ h3 {
     transition: 0.3s;
 }
 
-.btn-standard, .btn-standard:focus {
-    padding: .5em 1.5em;
-    margin-right: 1em;
+.btn {
+    border-radius: 5em;
+}
+
+/*.btn, .btn:focus {
+    padding: .2em 1.5em;
     border-radius: 5em;
     font-size: 1.25em;
     color: #37323c;
@@ -54,14 +57,10 @@ h3 {
     outline: none;
     -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-}
+}*/
 
-.btn-pop {
-    background: #73ef37;
-}
-
-.btn-signup {
-    border-radius: 5em;
+form {
+    color: black;
 }
 
 /*flash message pop-up*/
@@ -776,6 +775,10 @@ iframe body {
 
 .signup .content {
     justify-content: center;
+}
+
+.signup-form > * {
+    margin: 0 5px;
 }
 
 /*footer*/

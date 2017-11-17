@@ -106,38 +106,32 @@
 
             <div id="signup" class="feature signup">
                 <div class="container">
-
-                    <div style="margin: 20px 0 40px 0">
-
-                        <a class="btn btn-default btn-standard" href="pdf/whitepaper.pdf">
-                        WHITEPAPER</a>
-
-                        <button class="btn btn-success btn-standard btn-pop" data-toggle="modal" 
-                        data-target="#basicModal">PRESALE SIGNUP</button>
-
+                    <div class="text-center signup-title">
+                        Sign up for our pre-sale &amp; updates
                     </div>
 
-                    <h2>Subscribe to our newsletter</h2>
+                    <button class="btn btn-success" data-toggle="modal" data-target="#basicModal">PRESALE SIGNUP</button>
+                    
+                    <form method="post" action="/signup" class="form-inline">
 
-                    <div class="center-block signup-form">
-
-                        <form method="post" action="/signup" class="form-inline">
+                        <div class="signup-form">
 
                             <div class="input-group">
                                 <label class="sr-only" for="email">Email</label>
-                                <input name="email" type="email"
-                                placeholder="Enter Email" class="form-control"/>
-                            
-                            <span class="input-group-btn">
-                                <button class="btn btn-default btn-signup">SUBSCRIBE</button>
-                            </span>
+                                <input name="email" class="form-control" type="email"
+                                placeholder="Enter Email" required/>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-success">SIGN UP</button>
+                                </span>
                             </div>
+                            
 
-                            <span style="color:white"> | </span>
+                            <span style="color:white"> OR </span>
 
                             <%- include('partials/instantaccess', {id: ""}); %>
-                                                          
-                        </form>
+
+                        </div>                          
+                    </form>
 
                     </div>
                 </div>
@@ -263,15 +257,13 @@
                     <input name="name" type="text" placeholder="Enter Full Name"/>
                 </div> -->
                 <div class="form-group">
-                    <input name="email" type="email" placeholder="Enter Email"
-                    class="form-control"/>
+                    <input name="email" type="email" placeholder="Enter Email"/>
                 </div>
                 <div class="form-group">
-                    <textarea name="message" rows="4" placeholder="Your Message"
-                    class="form-control"></textarea>
+                    <textarea name="message" rows="4" placeholder="Your Message"></textarea>
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-default btn-pop btn-standard">SEND MESSAGE</button>
+                    <button class="btn btn-success">SEND MESSAGE</button>
                 </div>
             </form>
             <!-- </div> -->
@@ -280,35 +272,27 @@
 
     <div id="signup2" class="feature signup">
         <div class="text-center container">
-            <h2>Subscribe to our newsletter</h2>
-
+            <div class="signup-title">Sign up for our pre-sale &amp; updates</div>
             <div class="center-block signup-form">
 
                 <form method="post" action="/signup" class="form-inline">
-
-                    <div class="input-group">
-                        <label class="sr-only" for="email">Email</label>
-                        <input name="email" type="email"
-                        placeholder="Enter Email" class="form-control"/>
-                    
-                    <span class="input-group-btn">
-                        <button class="btn btn-default btn-signup">SUBSCRIBE</button>
-                    </span>
+                    <div class="form-group">
+                        <input name="email" class="email" type="email"
+                        placeholder="Enter Email"/>
                     </div>
+                    <button class="btn btn-success">SIGN UP</button>
 
-                    <span style="color:white"> | </span>
+                    <span style="color:white"> OR </span>
 
-                    <%- include('partials/instantaccess', {id: ""}); %>
-                                                  
+                    <%- include('partials/instantaccess', {id: 2}); %>
                 </form>
-
             </div>
         </div>
     </div>
 
     <footer>
 
-        <nav class="navbar navbar-inverse navbar-custom collapse navbar-collapse">
+        <nav class="navbar navbar-default collapse navbar-collapse">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">      
@@ -360,10 +344,10 @@
 
             <div class="modal-section">
                 <p>Please make sure to read our Whitepaper &amp; Terms and Conditions
-                before subscribing to our investor list.</p>
+                before subscribing to our pre-sale investor list.</p>
                 <div class="btn-panel text-center">
-                    <a class="btn btn-default btn-standard" target="_blank" href="pdf/whitepaper.pdf">Whitepaper</a>
-                    <a class="btn btn-default btn-standard" target="_blank" href="pdf/terms.pdf">Terms &amp; Conditions</a>
+                    <a class="btn btn-default" target="_blank" href="pdf/whitepaper.pdf">Whitepaper</a>
+                    <a class="btn btn-default" target="_blank" href="pdf/terms.pdf">Terms &amp; Conditions</a>
                 </div>
             </div>
 
@@ -374,9 +358,8 @@
                     <div class="form-group">
                         <label for="first-name" class="control-label col-xs-4">First Name</label>
 
-                        <div class="col-xs-6">
-                            <input id="first-name" name="fname" type="text" 
-                            placeholder="First Name" class="form-control"
+                        <div class="col-xs-8">
+                            <input id="first-name" name="fname" type="text" placeholder="First Name" 
                             oninvalid="this.setCustomValidity('Please enter a valid First Name')"
                             oninput="setCustomValidity('')"
                             required/>
@@ -386,9 +369,8 @@
                     <div class="form-group">
                         <label for="last-name" class="control-label col-xs-4">Last Name</label>
 
-                        <div class="col-xs-6">
-                            <input id="last-name" name="lname" type="text" 
-                            placeholder="Last Name" class="form-control"
+                        <div class="col-xs-8">
+                            <input id="last-name" name="lname" type="text" placeholder="Last Name" 
                             oninvalid="this.setCustomValidity('Please enter a valid Last Name')"
                             oninput="setCustomValidity('')"
                             required/>
@@ -398,9 +380,8 @@
                     <div class="form-group">
                         <label for="email" class="control-label col-xs-4">Email</label>
 
-                        <div class="col-xs-6">
-                            <input id="email" name="email" type="email" 
-                            placeholder="Email" class="form-control"
+                        <div class="col-xs-8">
+                            <input id="email" name="email" type="email" placeholder="Email" 
                             oninvalid="this.setCustomValidity('Please enter a valid Email')"
                             oninput="setCustomValidity('')"
                             required/>
@@ -412,7 +393,6 @@
 
                         <div class="col-xs-6">
                             <select id="country" name="country" style="width:100%" required  
-                             class="form-control"
                             oninvalid="this.setCustomValidity('Please select a country')"
                             oninput="setCustomValidity('')">
                                 <option disabled selected value> -- Select a Country -- </option>
@@ -424,9 +404,9 @@
                     <div class="form-group">
                         <label for="phone" class="control-label col-xs-4">Phone #</label>
 
-                        <div class="col-xs-6">
-                            <input id="phone" name="phone" type="tel" pattern='^\+?\d{0,13}' 
-                            placeholder="Phone #" class="form-control"
+                        <div class="col-xs-8">
+                            <input id="phone" name="phone" type="tel" 
+                            pattern='^\+?\d{0,13}' placeholder="Phone #"
                             oninvalid="this.setCustomValidity('Please enter a valid phone #')"
                             oninput="setCustomValidity('')"/>
                         </div>
@@ -442,7 +422,7 @@
                     </div>
 
                     <div class="form-group text-center">
-                        <button class="btn btn-standard btn-pop">SUBSCRIBE</button>
+                        <button class="btn btn-success">SIGN UP</button>
                     </div>
 
                 </form>

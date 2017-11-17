@@ -1,9 +1,10 @@
+// console.log(process.env);
+
 // app server modules
 var express = require('express');
 var session = require('express-session');
 var flash = require('express-flash');
 var compression = require('compression');
-var enforce = require('express-sslify');
 
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -41,7 +42,11 @@ app.use(session({
 }));
 app.use(flash());
 app.use(compression());
-app.use(enforce.HTTPS({ trustProtoHeader: true }));
+
+if (process.env.NODE_ENV === 'production') {
+    var enforce = require('express-sslify');
+    app.use(enforce.HTTPS({ trustProtoHeader: true }));
+}
 
 // data files
 var persons = require('./data/persons');
@@ -66,6 +71,7 @@ var contact_email = process.env.CONTACT_EMAIL;
 var mcApiKey = process.env.MAILCHIMP_API_KEY;
 var mcInstance = process.env.MAILCHIMP_INSTANCE;
 var mcListId = process.env.MAILCHIMP_SUBSCRIBER_LIST_ID;
+var mcInvestorListId = process.env.MAILCHIMP_INVESTOR_LIST_ID;
 
 // IA constants
 
@@ -235,6 +241,58 @@ app.post('/signup', function(req, res) {
             console.log(error);
             req.flash('flashMsg', 'Subscription failed.  Please email '+ contact_email +' for assistance.');
         } else {
+            req.flash('flashMsg', 'You have been successfully subscribed.');
+        }        
+        res.redirect(301, '/');
+    });
+
+});
+
+// handle a signup submission
+app.post('/signup-investor', function(req, res) {
+
+    var flashMsg = "";
+
+    // make sure email is populated
+    if(! req.body.email) {
+       flashMsg = 'Please enter an email address.';
+       req.flash('flashMsg', flashMsg);
+       res.redirect(301, '/');
+       return;
+    } 
+
+    // set up the mailchimp post options
+    var options = { method: 'POST',
+    url: 'https://'+ mcInstance +'.api.mailchimp.com/3.0/lists/'+ mcInvestorListId +'/members/',
+    headers: 
+    { 
+        'postman-token': '35c708d5-55bc-f828-90b6-d8dc5e01c3dc',
+        'cache-control': 'no-cache',
+        authorization: 'Basic ' + mcApiKey,
+        'content-type': 'application/json' },
+        body: 
+        { 
+            email_address: req.body.email,
+            status: 'subscribed',
+            merge_fields: {
+                FNAME: req.body.fname,
+                LNAME: req.body.lname,
+                COUNTRY: req.body.country,
+                PHONE: req.body.phone
+            }
+        },
+        json: true 
+    };
+
+    console.log(options);
+
+    request(options, function (error, response, body) {
+        if (error) {
+            console.log(error);
+            req.flash('flashMsg', 'Subscription failed.  Please email '+ contact_email +' for assistance.');
+        } else {
+            console.log("RESPONSE BODY");
+            console.log(body);
             req.flash('flashMsg', 'You have been successfully subscribed.');
         }        
         res.redirect(301, '/');
